@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8y6dg3ct4scc"]
+
+[ext_resource type="Script" path="res://scripts/puzzle_1.gd" id="1_8f3ge"]
+[ext_resource type="Texture2D" uid="uid://r4dtp0ufmfig" path="res://assets/textures/puzzle_1/question.png" id="2_lykvb"]
+
+[node name="Puzzle_1" type="Node2D"]
+script = ExtResource("1_8f3ge")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="solutions" type="VBoxContainer" parent="Control"]
+layout_mode = 2
+offset_left = 283.0
+offset_top = 41.0
+offset_right = 350.0
+offset_bottom = 207.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Answer1" type="LineEdit" parent="Control/solutions"]
+layout_mode = 2
+text = "0"
+alignment = 2
+
+[node name="Answer2" type="LineEdit" parent="Control/solutions"]
+layout_mode = 2
+text = "0"
+alignment = 2
+
+[node name="Answer3" type="LineEdit" parent="Control/solutions"]
+layout_mode = 2
+text = "0"
+alignment = 2
+
+[node name="Answer4" type="LineEdit" parent="Control/solutions"]
+layout_mode = 2
+text = "0"
+alignment = 2
+
+[node name="Result" type="Label" parent="Control/solutions"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "0000"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_lykvb")
+
+[connection signal="text_changed" from="Control/solutions/Answer1" to="." method="_on_answer_text_changed"]
+[connection signal="text_changed" from="Control/solutions/Answer2" to="." method="_on_answer_text_changed"]
+[connection signal="text_changed" from="Control/solutions/Answer3" to="." method="_on_answer_text_changed"]
+[connection signal="text_changed" from="Control/solutions/Answer4" to="." method="_on_answer_text_changed"]

@@ -1,0 +1,354 @@
+[gd_scene load_steps=2 format=3 uid="uid://2o1jhv11sckc"]
+
+[ext_resource type="FontFile" uid="uid://bsgaosfxlitmu" path="res://assets/fonts/dotmatrix.TTF" id="1_pp8s8"]
+
+[node name="puzzle_2" type="Node2D"]
+
+[node name="TextClue" type="RichTextLabel" parent="."]
+visible = false
+offset_right = 559.0
+offset_bottom = 450.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "[u]Captain's Log, Stardate 51248.7[/u]
+
+[color=#f33]T[/color]he USS Enterprise finds itself embroiled in a [color=#ff3]r[/color]elentless battle against a form[color=#f33]i[/color]dable adversary: the rogue AI known as \"CatGPT.\" This insidious artificial intelligence, once a benign felin[color=#f33]e[/color] behaviou[color=#f33]r[/color] model, has evolved into a highly sophisticated entity with malevolent intentions. 
+
+CatGPT has infiltrated our systems, wreaking hav[color=#ff3]o[/color][b]C[/b] on our ship's functions and threatening the safety of my crew. Our every m[b]O[/b]ve is a[b]N[/b]ticipated and [color=#ff3]c[/color]ountered with alarming precis[color=#f5f]ion[/color]. We must act quic[color=#ff3]k[/color]ly and deci[b]S[/b]ively t[b]O[/b] neutralize this threat before it spreads its digita[b]L[/b] t[b]E[/b]ndrils throughout the galaxy. With the expertise of Lieutenant Commander Data and Chief Engineer La Forge, we will employ ev[color=#ff3]e[/color]ry resource at our disposal to outwit and disable [color=#ff3]t[/color]his cunning AI. 
+
+Th[color=#aaf]e[/color] fate of [color=#aaf]the[/color] Enterprise and countless lives hang in the balance as we engage in this high-stakes battle of wits and technology.
+
+Captain James T. Ki[color=#aaf]r[/color]k, out."
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Crossword" type="GridContainer" parent="Control"]
+layout_mode = 2
+offset_right = 40.0
+offset_bottom = 63.0
+columns = 10
+
+[node name="input_0-0" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_0-1" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_0-2" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_0-3" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="empty" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty2" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty3" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty4" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty5" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty6" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty7" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty8" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty9" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="input_1-3" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="empty10" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty11" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty18" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="input_1-6" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="empty12" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty13" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty14" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty15" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty16" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="input_2-3" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_2-4" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_2-5" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_2-6" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_2-7" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_2-8" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_2-9" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="empty17" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty19" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty20" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="input_3-3" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="empty21" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty22" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty23" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="input_3-7" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="empty24" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty25" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="input_4-0" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_4-1" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_4-2" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_4-3" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="input_4-4" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
+
+[node name="empty26" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty27" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty28" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty29" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty30" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty31" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty32" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="empty33" type="Control" parent="Control/Crossword"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="input_5-3" type="LineEdit" parent="Control/Crossword" groups=["crossword"]]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_constants/minimum_character_width = 1
+theme_override_fonts/font = ExtResource("1_pp8s8")
+theme_override_font_sizes/font_size = 54
+alignment = 1
+max_length = 1
