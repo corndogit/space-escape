@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Escape-game"
-run/main_scene="res://scenes/puzzle_1.tscn"
+run/main_scene="res://scenes/level.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -24,3 +24,5 @@ version_control/autoload_on_startup=true
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.301961, 0.301961, 0.301961, 1)
+textures/canvas_textures/default_texture_filter=0
