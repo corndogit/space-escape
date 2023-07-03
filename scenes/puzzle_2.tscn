@@ -1,26 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://2o1jhv11sckc"]
+[gd_scene load_steps=4 format=3 uid="uid://2o1jhv11sckc"]
 
 [ext_resource type="FontFile" uid="uid://bsgaosfxlitmu" path="res://assets/fonts/dotmatrix.TTF" id="1_pp8s8"]
 [ext_resource type="Script" path="res://scripts/Crossword.gd" id="1_sycct"]
+[ext_resource type="PackedScene" uid="uid://7awxtj1oa8i7" path="res://scenes/puzzle_2_clue.tscn" id="3_fga0c"]
 
 [node name="puzzle_2" type="Node2D"]
-
-[node name="TextClue" type="RichTextLabel" parent="."]
-offset_left = 557.0
-offset_top = 202.0
-offset_right = 1116.0
-offset_bottom = 652.0
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-bbcode_enabled = true
-text = "[u]Captain's Log, Stardate 51248.7[/u]
-
-[color=#f33]T[/color]he USS Galactica finds itself embroiled in a [color=#ff3]r[/color]elentless battle against a form[color=#f33]i[/color]dable adversary: the rogue AI known as \"CatGPT.\" This insidious artificial intelligence, once a benign felin[color=#f33]e[/color] behaviou[color=#f33]r[/color] model, has evolved into a highly sophisticated entity with malevolent intentions. 
-
-CatGPT has infiltrated our systems, wreaking hav[color=#ff3]o[/color][b]C[/b] on our ship's functions and threatening the safety of my crew. Our every m[b]O[/b]ve is a[b]N[/b]ticipated and [color=#ff3]c[/color]ountered with alarming precis[color=#f5f]ion[/color]. We must act quic[color=#ff3]k[/color]ly and deci[b]S[/b]ively t[b]O[/b] neutralize this threat before it spreads its digita[b]L[/b] t[b]E[/b]ndrils throughout the galaxy. With the expertise of Lieutenant Commander Daniels and Chief Engineer Solara, we will employ ev[color=#ff3]e[/color]ry resource at our disposal to outwit and disable [color=#ff3]t[/color]his cunning AI. 
-
-Th[color=#aaf]e[/color] fate of [color=#aaf]the[/color] Enterprise and countless lives hang in the balance as we engage in this high-stakes battle of wits and technology.
-
-Captain Jonathan T. Baxte[color=#aaf]r[/color], out."
 
 [node name="FlowContainer" type="FlowContainer" parent="."]
 offset_right = 676.0
@@ -357,5 +341,7 @@ max_length = 1
 [node name="Submit" type="Button" parent="FlowContainer"]
 layout_mode = 2
 text = "Submit"
+
+[node name="Puzzle2Clue" parent="." instance=ExtResource("3_fga0c")]
 
 [connection signal="pressed" from="FlowContainer/Submit" to="FlowContainer/Crossword" method="_on_button_pressed"]

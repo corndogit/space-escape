@@ -1,24 +1,62 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8y6dg3ct4scc"]
+[gd_scene load_steps=3 format=3 uid="uid://dpbitbapkrcp"]
 
 [ext_resource type="Script" path="res://scripts/puzzle_1.gd" id="1_8f3ge"]
-[ext_resource type="Texture2D" uid="uid://r4dtp0ufmfig" path="res://assets/textures/puzzle_1/question.png" id="2_lykvb"]
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="2_o4b6n"]
 
 [node name="Puzzle_1" type="Node2D"]
 script = ExtResource("1_8f3ge")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_right = 261.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_o4b6n")
+alignment = 1
+
+[node name="questions" type="VBoxContainer" parent="Control"]
+layout_mode = 2
+
+[node name="Question1" type="RichTextLabel" parent="Control/questions"]
+custom_minimum_size = Vector2(150, 49)
+layout_mode = 2
+theme = ExtResource("2_o4b6n")
+bbcode_enabled = true
+text = "A [font=assets/fonts/glipervelz.ttf]A[/font] 4 ="
+scroll_active = false
+
+[node name="Question2" type="RichTextLabel" parent="Control/questions"]
+custom_minimum_size = Vector2(150, 49)
+layout_mode = 2
+theme = ExtResource("2_o4b6n")
+bbcode_enabled = true
+text = "7 [font=assets/fonts/glipervelz.ttf]B[/font] C ="
+scroll_active = false
+
+[node name="Question3" type="RichTextLabel" parent="Control/questions"]
+custom_minimum_size = Vector2(150, 49)
+layout_mode = 2
+theme = ExtResource("2_o4b6n")
+bbcode_enabled = true
+text = "6 [font=assets/fonts/glipervelz.ttf]C[/font] D ="
+scroll_active = false
+
+[node name="Question4" type="RichTextLabel" parent="Control/questions"]
+custom_minimum_size = Vector2(150, 49)
+layout_mode = 2
+theme = ExtResource("2_o4b6n")
+bbcode_enabled = true
+text = "9 [font=assets/fonts/glipervelz.ttf]D[/font] F ="
+scroll_active = false
 
 [node name="solutions" type="VBoxContainer" parent="Control"]
 layout_mode = 2
-offset_left = 283.0
-offset_top = 41.0
-offset_right = 350.0
-offset_bottom = 207.0
-scale = Vector2(1.5, 1.5)
 
 [node name="Answer1" type="LineEdit" parent="Control/solutions"]
 layout_mode = 2
@@ -45,12 +83,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "0000"
 horizontal_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_lykvb")
 
 [connection signal="text_changed" from="Control/solutions/Answer1" to="." method="_on_answer_text_changed"]
 [connection signal="text_changed" from="Control/solutions/Answer2" to="." method="_on_answer_text_changed"]
