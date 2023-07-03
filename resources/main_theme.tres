@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cujec1iqo8wh0"]
+
+[ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="1_nerym"]
+
+[resource]
+default_font = ExtResource("1_nerym")
+default_font_size = 32
