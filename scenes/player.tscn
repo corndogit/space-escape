@@ -55,7 +55,7 @@ animations = [{
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pn4yl"]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Interactable"]]
 position = Vector2(956, 497)
 script = ExtResource("1_cb1b4")
 speed = 50.0
@@ -73,6 +73,7 @@ sprite_frames = SubResource("SpriteFrames_30c8x")
 position = Vector2(-3, 4)
 scale = Vector2(1, 0.64)
 collision_mask = 2
+hit_from_inside = true
 
 [node name="Debug" type="TextureRect" parent="Sight"]
 visible = false

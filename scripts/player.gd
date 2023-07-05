@@ -7,8 +7,12 @@ extends CharacterBody2D
 
 func _process(delta):
 	_calculate_movement(speed * delta)
-	if sight.is_colliding():  # see if there is anything to interact with
-		print(sight.get_collider())
+	if Input.is_key_pressed(KEY_E):
+		if sight.is_colliding():  # see if there is anything to interact with
+			var target = sight.get_collider()
+			target.get_groups()
+			if target.is_in_group("Interactable"):
+				target.interact()
 	
 func _calculate_movement(diff : float):
 	if Input.is_key_pressed(KEY_A):
