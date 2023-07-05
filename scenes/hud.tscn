@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3ycex01efoyt"]
+
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="1_e7lgk"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_rfioe"]
+[ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="2_wmbj7"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -184.0
+offset_top = -101.0
+offset_right = 184.0
+offset_bottom = 100.0
+script = ExtResource("1_rfioe")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 0
+offset_right = 366.0
+offset_bottom = 200.0
+alignment = 1
+
+[node name="Timer" type="Label" parent="HFlowContainer"]
+layout_mode = 2
+theme = ExtResource("1_e7lgk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_wmbj7")
+theme_override_font_sizes/font_size = 20
+text = "00:00
+"
+
+[node name="CountdownTimer" type="Timer" parent="."]
+wait_time = 900.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
