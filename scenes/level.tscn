@@ -1325,6 +1325,7 @@ pattern_1 = SubResource("TileMapPattern_0xqep")
 pattern_2 = SubResource("TileMapPattern_2ksw8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o4w4q"]
+size = Vector2(20, 26)
 
 [node name="Level" type="Node2D"]
 
@@ -1374,8 +1375,9 @@ script = ExtResource("4_hx4oo")
 motion_mode = 1
 speed = 150.0
 
-[node name="BrokenPipe" type="Area2D" parent="."]
+[node name="BrokenPipe" type="StaticBody2D" parent="."]
 position = Vector2(827, 421)
+collision_layer = 2
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="BrokenPipe"]
 position = Vector2(4, 4)
@@ -1389,4 +1391,5 @@ initial_velocity_max = 50.0
 color = Color(1, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BrokenPipe"]
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_o4w4q")

@@ -12,6 +12,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="Text" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_right = 559.0
 offset_bottom = 450.0
 theme = ExtResource("1_b4y8w")
