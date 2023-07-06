@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://7awxtj1oa8i7"]
+[gd_scene load_steps=6 format=3 uid="uid://7awxtj1oa8i7"]
 
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="1_b4y8w"]
 [ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="2_ecyun"]
+
+[sub_resource type="Curve" id="Curve_x4dub"]
+
+[sub_resource type="CurveTexture" id="CurveTexture_jjdb4"]
+curve = SubResource("Curve_x4dub")
 
 [sub_resource type="FontVariation" id="FontVariation_y5h88"]
 base_font = ExtResource("2_ecyun")
@@ -11,10 +16,18 @@ variation_embolden = 0.55
 layout_mode = 3
 anchors_preset = 0
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 597.0
+offset_bottom = 501.0
+texture = SubResource("CurveTexture_jjdb4")
+
 [node name="Text" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_right = 559.0
-offset_bottom = 450.0
+offset_left = 22.0
+offset_top = 25.0
+offset_right = 581.0
+offset_bottom = 475.0
 theme = ExtResource("1_b4y8w")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/bold_font = SubResource("FontVariation_y5h88")

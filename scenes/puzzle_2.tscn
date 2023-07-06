@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://2o1jhv11sckc"]
+[gd_scene load_steps=3 format=3 uid="uid://2o1jhv11sckc"]
 
 [ext_resource type="FontFile" uid="uid://bsgaosfxlitmu" path="res://assets/fonts/dotmatrix.TTF" id="1_pp8s8"]
 [ext_resource type="Script" path="res://scripts/Crossword.gd" id="1_sycct"]
-[ext_resource type="PackedScene" uid="uid://7awxtj1oa8i7" path="res://scenes/puzzle_2_clue.tscn" id="3_fga0c"]
 
 [node name="puzzle_2" type="Node2D"]
 
@@ -341,7 +340,5 @@ max_length = 1
 [node name="Submit" type="Button" parent="FlowContainer"]
 layout_mode = 2
 text = "Submit"
-
-[node name="Puzzle2Clue" parent="." instance=ExtResource("3_fga0c")]
 
 [connection signal="pressed" from="FlowContainer/Submit" to="FlowContainer/Crossword" method="_on_button_pressed"]
