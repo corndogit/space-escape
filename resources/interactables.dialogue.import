@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://snemaphehkl"
+path="res://.godot/imported/interactables.dialogue-23f97039310387ca85ea52ab2d7fed3b.tres"
+
+[deps]
+
+source_file="res://resources/interactables.dialogue"
+dest_files=["res://.godot/imported/interactables.dialogue-23f97039310387ca85ea52ab2d7fed3b.tres"]
+
+[params]
+
+defaults=true

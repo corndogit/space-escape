@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PlayerInventory="*res://scripts/autoload/player_inventory.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+State="*res://scripts/autoload/state.gd"
 
 [editor]
 
@@ -28,6 +29,10 @@ version_control/autoload_on_startup=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://resources/interactables.dialogue")
 
 [rendering]
 
