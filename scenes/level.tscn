@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cd57772k0n1ho"]
+[gd_scene load_steps=19 format=3 uid="uid://d1hd2ggbk2573"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/tileset_x16.png" id="1_g6cqr"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scripts/BgAnimate.gd" id="4_hx4oo"]
 [ext_resource type="PackedScene" uid="uid://r5i2stcq3yur" path="res://scenes/player.tscn" id="5_ypggi"]
 [ext_resource type="Script" path="res://scripts/BrokenPipe.gd" id="6_ch37n"]
-[ext_resource type="Script" path="res://scenes/ElectricalPanel.gd" id="7_vanau"]
+[ext_resource type="Script" path="res://scripts/ElectricalPanel.gd" id="8_1howk"]
 [ext_resource type="Script" path="res://scripts/ComputerTable.gd" id="9_uuee3"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_t4g4p"]
@@ -1539,7 +1539,7 @@ shape = SubResource("RectangleShape2D_o4w4q")
 [node name="ElectricalPanel" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(1179, 457)
 collision_layer = 2
-script = ExtResource("7_vanau")
+script = ExtResource("8_1howk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ElectricalPanel"]
 position = Vector2(-0.5, -3)
