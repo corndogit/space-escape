@@ -18,11 +18,16 @@ config/icon="res://icon.svg"
 [autoload]
 
 PlayerInventory="*res://scripts/autoload/player_inventory.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [rendering]
 
