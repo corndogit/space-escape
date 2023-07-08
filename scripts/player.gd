@@ -8,7 +8,7 @@ extends CharacterBody2D
 func _process(delta):
 	_calculate_movement(speed * delta)
 	
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	_check_for_interaction()
 
 func _calculate_movement(diff : float):

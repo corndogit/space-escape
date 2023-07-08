@@ -18,4 +18,3 @@ func _on_mouse_exited():
 func _process(_delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and closable:
 		get_parent().queue_free()
-		
