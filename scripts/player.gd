@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var sight : RayCast2D = get_node("Sight")
 var in_dialogue : bool = false
 
-func _process(delta):
+func _physics_process(delta):
 	_calculate_movement(speed * delta)
 	
 func _unhandled_input(_event):
@@ -43,8 +43,6 @@ func _calculate_movement(diff : float):
 
 	if not Input.is_anything_pressed():
 		sprite.play("idle")
-	
-	move_and_slide()
 
 func _check_for_interaction():
 	if Input.is_key_pressed(KEY_E):
@@ -56,6 +54,3 @@ func _check_for_interaction():
 				target.interact()
 				await DialogueManager.dialogue_ended
 				in_dialogue= false
-			
-				
-
