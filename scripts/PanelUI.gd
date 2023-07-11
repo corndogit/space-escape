@@ -1,6 +1,6 @@
 extends PanelContainer
 
-var closable = true
+var closable = false
 
 func _ready():
 	var window_size = get_window().get_size_with_decorations()
