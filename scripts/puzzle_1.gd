@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var solutions_element : VBoxContainer= get_node("Control/solutions")
 @onready var result : Label = get_node("Control/solutions/Result")

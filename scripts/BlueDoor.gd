@@ -1,6 +1,6 @@
 extends Interactable
 
-@onready var tilemap : TileMap = get_node("/root/Level/TileMap")
+@onready var tilemap : TileMap = get_parent().get_node("TileMap")
 const DOOR_TILES = {
 	"top_left": Vector2(16, -4),
 	"bottom_left": Vector2(16, -3),
@@ -11,8 +11,9 @@ const DOOR_TILES = {
 func interact():
 	print("Interaction with %s" % name)
 	erase()
+	super.interact()
 
 func erase():
 	for tile in DOOR_TILES.values():
 		tilemap.erase_cell(1, tile)
-	get_node("CollisionShape2D").queue_free()
+	get_node(".").remove_from_group("Interactable")

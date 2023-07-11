@@ -1,6 +1,6 @@
 extends Interactable
 
-@onready var tilemap : TileMap = get_node("/root/Level/TileMap")
+@onready var tilemap : TileMap = get_parent().get_node("TileMap")
 var panel_removed : bool = false
 var battery_taken : bool = false
 const PANEL_TILES = {
