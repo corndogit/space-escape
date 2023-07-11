@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1hd2ggbk2573"]
+[gd_scene load_steps=25 format=3 uid="uid://d1hd2ggbk2573"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/tileset_x16.png" id="1_g6cqr"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scripts/RedDoor.gd" id="10_uj1kr"]
 [ext_resource type="Script" path="res://scripts/YellowDoor.gd" id="11_pfbj8"]
 [ext_resource type="Script" path="res://scripts/BlueDoor.gd" id="12_pk7c6"]
+[ext_resource type="Script" path="res://scripts/Grate.gd" id="13_luiad"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_t4g4p"]
 tile_data = PackedInt32Array(0, 1310720, 18, 65536, 1310720, 19, 131072, 1310720, 20, 196608, 1310720, 21, 1, 1376256, 18, 65537, 1376256, 19, 131073, 1376256, 20, 196609, 1376256, 21, 2, 1441792, 18, 65538, 1441792, 19, 131074, 1441792, 20, 196610, 1441792, 21, 3, 1507328, 18, 65539, 1507328, 19, 131075, 1507328, 20, 196611, 1507328, 21)
@@ -1477,6 +1478,9 @@ size = Vector2(64, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16a6c"]
 size = Vector2(31, 15)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ihwy6"]
+radius = 14.0
+
 [node name="Level" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1492,7 +1496,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-262128, 1703936, 14, -196592, 1703936, 15, -131056, 1703936, 16, -65520, 1703936, 17, 16, 1703936, 18, 65552, 1703936, 19, -262127, 1769472, 14, -196591, 1769472, 15, -131055, 1769472, 16, -65519, 1769472, 17, 17, 1769472, 18, 65553, 1769472, 19, -655344, 1966080, 18, -589808, 1966080, 19, -524272, 1966080, 20, -458736, 1966080, 21, -655343, 2031616, 18, -589807, 2031616, 19, -524271, 2031616, 20, -458735, 2031616, 21, 196638, 2621440, 19, 131103, 2686976, 18, 196639, 2686976, 19, 655368, 1179648, 32, 720904, 1179648, 33, 655369, 1245184, 32, 720905, 1245184, 33, 655370, 1310720, 32, 720906, 1310720, 33, 655371, 1376256, 32, 720907, 1376256, 33, 0, 1572864, 18, 65536, 1572864, 19, 1, 1638400, 18, 65537, 1638400, 19, 720894, 917504, 20, 786430, 917504, 21, 720895, 983040, 20, 786431, 983040, 21, 327678, 917504, 20, 393214, 917504, 21, 327679, 983040, 20, 393215, 983040, 21, 131102, 2621440, 18)
+layer_1/tile_data = PackedInt32Array(-262128, 1703936, 14, -196592, 1703936, 15, -131056, 1703936, 16, -65520, 1703936, 17, 16, 1703936, 18, 65552, 1703936, 19, -262127, 1769472, 14, -196591, 1769472, 15, -131055, 1769472, 16, -65519, 1769472, 17, 17, 1769472, 18, 65553, 1769472, 19, -655344, 1966080, 18, -589808, 1966080, 19, -524272, 1966080, 20, -458736, 1966080, 21, -655343, 2031616, 18, -589807, 2031616, 19, -524271, 2031616, 20, -458735, 2031616, 21, 196638, 2621440, 19, 131103, 2686976, 18, 196639, 2686976, 19, 655368, 1179648, 32, 720904, 1179648, 33, 655369, 1245184, 32, 720905, 1245184, 33, 655370, 1310720, 32, 720906, 1310720, 33, 655371, 1376256, 32, 720907, 1376256, 33, 0, 1572864, 18, 65536, 1572864, 19, 1, 1638400, 18, 65537, 1638400, 19, 786430, 917504, 21, 720895, 983040, 20, 786431, 983040, 21, 327678, 917504, 20, 393214, 917504, 21, 327679, 983040, 20, 393215, 983040, 21, 131102, 2621440, 18, 720894, 917504, 20)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -1519,7 +1523,6 @@ texture = ExtResource("3_1puyj")
 script = ExtResource("4_hx4oo")
 
 [node name="Player" parent="." instance=ExtResource("5_ypggi")]
-motion_mode = 1
 speed = 150.0
 
 [node name="BrokenPipe" type="StaticBody2D" parent="." groups=["Interactable"]]
@@ -1585,3 +1588,11 @@ script = ExtResource("12_pk7c6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlueDoor"]
 position = Vector2(-1, 4.5)
 shape = SubResource("RectangleShape2D_16a6c")
+
+[node name="Grate" type="StaticBody2D" parent="." groups=["Interactable"]]
+position = Vector2(667, 576)
+collision_layer = 2
+script = ExtResource("13_luiad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grate"]
+shape = SubResource("CircleShape2D_ihwy6")

@@ -9,6 +9,7 @@ if not State.electrical_panel.battery_taken:
 	- Yes
 		You took the battery.
 		set State.electrical_panel.battery_taken = true
+		do State.electrical_panel.remove_from_group("Interactable")
 		=> END
 	- No => END
 
@@ -22,6 +23,7 @@ if State.electrical_panel.battery_taken and not State.broken_pipe.battery_charge
 	- Yes
 		The battery is now charged.
 		set State.broken_pipe.battery_charged = true
+		do State.broken_pipe.remove_from_group("Interactable")
 	- No => END
 	
 => END
