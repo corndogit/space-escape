@@ -12,7 +12,7 @@ func _process(delta):
 	_check_for_interactable()
 	
 func _unhandled_input(_event):
-	if Input.is_key_pressed(KEY_E) and _check_for_interactable():
+	if Input.is_key_pressed(KEY_E) and _check_for_interactable() and not in_dialogue:
 		_player_interact(sight.get_collider())
 
 func _calculate_movement(diff : float):

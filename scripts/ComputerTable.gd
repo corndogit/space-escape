@@ -1,7 +1,7 @@
 extends Interactable
 
 var powered : bool = true
-var puzzle_scene = preload("res://scenes/puzzle_2_clue.tscn").instantiate()
+var puzzle_scene = preload("res://scenes/puzzle_2.tscn").instantiate()
 @onready var level = get_parent()
 @onready var player = level.get_node("Player")
 @onready var camera = player.get_node("Camera2D")

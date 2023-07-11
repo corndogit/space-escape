@@ -202,7 +202,6 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Interactable"]]
-position = Vector2(956, 497)
 motion_mode = 1
 script = ExtResource("1_cb1b4")
 speed = 50.0
