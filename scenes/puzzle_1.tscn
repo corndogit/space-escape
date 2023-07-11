@@ -31,6 +31,7 @@ script = ExtResource("1_8f3ge")
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1"]
 custom_minimum_size = Vector2(500, 500)
+layout_mode = 0
 offset_right = 500.0
 offset_bottom = 500.0
 texture = SubResource("CurveTexture_pi76k")
