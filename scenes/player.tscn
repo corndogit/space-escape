@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_cb1b4"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_b1aq0"]
+[ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="4_ln5ix"]
 [ext_resource type="PackedScene" uid="uid://d3ycex01efoyt" path="res://scenes/hud.tscn" id="6_ojwl6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jh47"]
@@ -200,8 +201,6 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pn4yl"]
-
 [node name="Player" type="CharacterBody2D" groups=["Interactable"]]
 position = Vector2(956, 497)
 motion_mode = 1
@@ -227,15 +226,18 @@ target_position = Vector2(0, 34.375)
 collision_mask = 2
 hit_from_inside = true
 
-[node name="Debug" type="TextureRect" parent="Sight"]
-visible = false
-offset_left = -1.0
-offset_right = 1.0
-offset_bottom = 40.0
-scale = Vector2(1, 1.23529)
-texture = SubResource("PlaceholderTexture2D_pn4yl")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 
 [node name="HUD" parent="." instance=ExtResource("6_ojwl6")]
+
+[node name="Indicator" type="Label" parent="."]
+visible = false
+offset_left = 9.0
+offset_top = -25.0
+offset_right = 18.0
+offset_bottom = 1.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_ln5ix")
+text = "?"
