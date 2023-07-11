@@ -3,7 +3,6 @@
 if not State.electrical_panel.panel_removed:
 	You remove the panel. There is a battery inside.
 	set State.electrical_panel.panel_removed = true
-	=> END
 
 if not State.electrical_panel.battery_taken:
 	Take the battery?

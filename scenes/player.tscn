@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d3ycex01efoyt" path="res://scenes/hud.tscn" id="6_ojwl6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jh47"]
-size = Vector2(21, 19)
+size = Vector2(22, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e7agw"]
 atlas = ExtResource("2_b1aq0")
@@ -204,11 +204,12 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" groups=["Interactable"]]
 position = Vector2(956, 497)
+motion_mode = 1
 script = ExtResource("1_cb1b4")
 speed = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.5, 13.5)
+position = Vector2(-4, 10.5)
 shape = SubResource("RectangleShape2D_1jh47")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -222,6 +223,7 @@ frame_progress = 0.521744
 [node name="Sight" type="RayCast2D" parent="."]
 position = Vector2(-3, 4)
 scale = Vector2(1, 0.64)
+target_position = Vector2(0, 34.375)
 collision_mask = 2
 hit_from_inside = true
 

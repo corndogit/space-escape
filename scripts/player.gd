@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var speed : float = 300.0
 @onready var sprite : AnimatedSprite2D = get_node("AnimatedSprite2D")
 @onready var sight : RayCast2D = get_node("Sight")
+var in_dialogue : bool = false
 
 func _process(delta):
 	_calculate_movement(speed * delta)
@@ -12,6 +13,10 @@ func _unhandled_input(_event):
 	_check_for_interaction()
 
 func _calculate_movement(diff : float):
+	if in_dialogue:  # disable movement during dialogue
+		sprite.play("idle")
+		return
+		
 	if Input.is_key_pressed(KEY_A):
 		position.x -= diff
 		sight.rotation_degrees = 90
@@ -47,4 +52,10 @@ func _check_for_interaction():
 			var target = sight.get_collider()
 			target.get_groups()
 			if target.is_in_group("Interactable"):
+				in_dialogue = true  # entering dialogue
 				target.interact()
+				await DialogueManager.dialogue_ended
+				in_dialogue= false
+			
+				
+
