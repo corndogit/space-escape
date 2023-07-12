@@ -2,8 +2,10 @@ extends Control
 
 @onready var solutions_element : VBoxContainer= get_node("Control/solutions")
 @onready var result : Label = get_node("Control/solutions/Result")
+@onready var title : Label = get_node("Title")
 const CORRECT_ANSWER : String = "7275"
 var input_fields : Array = []
+signal puzzle_solved
 
 func _ready():
 	for node in solutions_element.get_children():
@@ -26,8 +28,10 @@ func _on_answer_text_changed(_new_text):
 func _check_result():
 	if result.text == CORRECT_ANSWER:
 		result.add_theme_color_override("font_color", Color(0, 1, 0))
-		print("Puzzle solved!")
+		title.text = "Access granted"
 		for field in input_fields:
 			field.editable = false
 		State.computer_table.puzzle_1_solved = true
+		emit_signal("puzzle_solved")
+		
 	

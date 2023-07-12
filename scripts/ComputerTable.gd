@@ -1,6 +1,6 @@
 extends Interactable
 
-var powered : bool = false
+var powered : bool = true
 var puzzle_1_solved : bool = false
 var puzzle_scene = preload("res://scenes/puzzle_1.tscn").instantiate()
 @onready var level = get_parent()
@@ -23,6 +23,7 @@ func interact():
 func close_puzzle():
 	# do not forget how to do this
 	puzzle_scene.visible = false
-	level.remove_child(puzzle_scene)
+	if level.get_node_or_null(puzzle_scene.get_path()):
+		level.remove_child(puzzle_scene)
 	camera.enabled = true
 	player.in_dialogue = false

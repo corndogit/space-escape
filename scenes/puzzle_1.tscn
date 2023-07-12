@@ -99,29 +99,29 @@ alignment = 1
 
 [node name="Answer1" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions"]
 layout_mode = 2
-text = "0"
 alignment = 2
+max_length = 1
 caret_blink = true
 caret_blink_interval = 0.5
 
 [node name="Answer2" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions"]
 layout_mode = 2
-text = "0"
 alignment = 2
+max_length = 1
 caret_blink = true
 caret_blink_interval = 0.5
 
 [node name="Answer3" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions"]
 layout_mode = 2
-text = "0"
 alignment = 2
+max_length = 1
 caret_blink = true
 caret_blink_interval = 0.5
 
 [node name="Answer4" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions"]
 layout_mode = 2
-text = "0"
 alignment = 2
+max_length = 1
 caret_blink = true
 caret_blink_interval = 0.5
 
@@ -145,6 +145,7 @@ vertical_alignment = 1
 
 [connection signal="mouse_entered" from="PanelContainer" to="PanelContainer" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PanelContainer" to="PanelContainer" method="_on_mouse_exited"]
+[connection signal="puzzle_solved" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1" to="PanelContainer" method="_on_puzzle_1_puzzle_solved"]
 [connection signal="text_changed" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions/Answer1" to="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1" method="_on_answer_text_changed"]
 [connection signal="text_changed" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions/Answer2" to="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1" method="_on_answer_text_changed"]
 [connection signal="text_changed" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions/Answer3" to="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1" method="_on_answer_text_changed"]
