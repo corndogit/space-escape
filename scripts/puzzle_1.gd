@@ -29,5 +29,5 @@ func _check_result():
 		print("Puzzle solved!")
 		for field in input_fields:
 			field.editable = false
-		# communicate that this puzzle is solved
+		State.computer_table.puzzle_1_solved = true
 	

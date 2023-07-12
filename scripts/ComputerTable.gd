@@ -1,7 +1,8 @@
 extends Interactable
 
 var powered : bool = false
-var puzzle_scene = preload("res://scenes/puzzle_2_clue.tscn").instantiate()
+var puzzle_1_solved : bool = false
+var puzzle_scene = preload("res://scenes/puzzle_1.tscn").instantiate()
 @onready var level = get_parent()
 @onready var player = level.get_node("Player")
 @onready var camera = player.get_node("Camera2D")
@@ -11,7 +12,7 @@ func _ready():
 	puzzle_scene.visible = false
 
 func interact():
-	if not powered:
+	if not powered or puzzle_1_solved:
 		DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "computer_table")
 	else:
 		level.add_child(puzzle_scene)

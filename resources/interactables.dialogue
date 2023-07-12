@@ -41,5 +41,15 @@ if not State.computer_table.powered:
 				The computer turns on.
 				set State.computer_table.powered = true
 		- No => END
+if State.computer_table.puzzle_1_solved:
+	Computer: Welcome superuser, please select an action below.
+	- View captain's log
+		Now loading latest captain's log...
+	- Close => END
+=> END
+
+~ red_door
+if not State.computer_table.puzzle_1_solved:
+	Red door: ERROR - access denied, 
 
 => END
