@@ -56,3 +56,20 @@ else:
 	do State.red_door.erase()
 	The door unlocks.
 => END
+
+~ crowbar
+do State.crowbar.sprite.queue_free()
+You picked up the crowbar.
+do State.crowbar.pickup()
+
+=> END
+
+~ grate
+if not State.crowbar.taken:
+	It's a metal grate. It's too heavy to move with your hands alone.
+else:
+	Use the crowbar?
+	- Yes
+		You pry the grate open.
+	- No => END 
+=> END

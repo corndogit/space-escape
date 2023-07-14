@@ -8,3 +8,5 @@ var electrical_panel : Node
 var broken_pipe : Node
 var computer_table : Node
 var computer_wall : Node
+var crowbar : Node
+var grate : Node

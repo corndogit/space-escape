@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d1hd2ggbk2573"]
+[gd_scene load_steps=29 format=3 uid="uid://ntfl8gjkgctg"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/tileset_x16.png" id="1_g6cqr"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
@@ -13,6 +13,9 @@
 [ext_resource type="Script" path="res://scripts/YellowDoor.gd" id="11_pfbj8"]
 [ext_resource type="Script" path="res://scripts/BlueDoor.gd" id="12_pk7c6"]
 [ext_resource type="Script" path="res://scripts/Grate.gd" id="13_luiad"]
+[ext_resource type="Script" path="res://scripts/ComputerWall.gd" id="14_su6ol"]
+[ext_resource type="Script" path="res://scripts/Crowbar.gd" id="15_2fpg3"]
+[ext_resource type="Texture2D" uid="uid://b141mm56glqel" path="res://assets/textures/items/crowbar.png" id="16_4u20u"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_t4g4p"]
 tile_data = PackedInt32Array(0, 1310720, 18, 65536, 1310720, 19, 131072, 1310720, 20, 196608, 1310720, 21, 1, 1376256, 18, 65537, 1376256, 19, 131073, 1376256, 20, 196609, 1376256, 21, 2, 1441792, 18, 65538, 1441792, 19, 131074, 1441792, 20, 196610, 1441792, 21, 3, 1507328, 18, 65539, 1507328, 19, 131075, 1507328, 20, 196611, 1507328, 21)
@@ -1481,6 +1484,8 @@ size = Vector2(31, 15)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ihwy6"]
 radius = 14.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ki0it"]
+
 [node name="Level" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1598,3 +1603,22 @@ script = ExtResource("13_luiad")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grate"]
 shape = SubResource("CircleShape2D_ihwy6")
+
+[node name="ComputerWall" type="StaticBody2D" parent="." groups=["Interactable"]]
+position = Vector2(699, 426)
+collision_layer = 2
+script = ExtResource("14_su6ol")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerWall"]
+shape = SubResource("RectangleShape2D_ki0it")
+
+[node name="Crowbar" type="StaticBody2D" parent="." groups=["Interactable"]]
+position = Vector2(955, 734)
+collision_layer = 2
+script = ExtResource("15_2fpg3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crowbar"]
+shape = SubResource("RectangleShape2D_ki0it")
+
+[node name="Sprite2D" type="Sprite2D" parent="Crowbar"]
+texture = ExtResource("16_4u20u")
