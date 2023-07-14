@@ -1,6 +1,6 @@
 extends Interactable
 
-var powered : bool = true
+var powered : bool = false
 var puzzle_1_solved : bool = false
 var puzzle_scene = preload("res://scenes/puzzle_1.tscn").instantiate()
 @onready var level = get_parent()

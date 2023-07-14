@@ -57,6 +57,16 @@ else:
 	The door unlocks.
 => END
 
+~ blue_door
+if not State.computer_wall.puzzle_2_solved:
+	Blue: ERROR - instruction "Open door" not found
+	It seems that the door's logic circuit isn't functioning
+else:
+	Blue door: Log
+	do State.blue_door.erase()
+	The door unlocks.
+=> END
+
 ~ crowbar
 do State.crowbar.sprite.queue_free()
 You picked up the crowbar.
@@ -81,4 +91,4 @@ if not State.computer_table.powered:
 if not State.computer_table.puzzle_1_solved:
 	Remote console: ERROR - superuser level required. The incident will be reported. 
 	=> END
-=>
+=> END

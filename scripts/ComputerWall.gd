@@ -18,7 +18,6 @@ func interact():
 		puzzle_scene.visible = true
 
 func close_puzzle():
-	# do not forget how to do this
 	puzzle_scene.visible = false
 	if level.get_node_or_null(puzzle_scene.get_path()):
 		level.remove_child(puzzle_scene)
