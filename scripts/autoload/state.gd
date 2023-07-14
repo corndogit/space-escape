@@ -10,3 +10,5 @@ var computer_table : Node
 var computer_wall : Node
 var crowbar : Node
 var grate : Node
+
+var active_puzzle : Interactable  # the currently opened puzzle scene

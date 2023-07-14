@@ -9,7 +9,7 @@ if not State.electrical_panel.battery_taken:
 	- Yes
 		You took the battery.
 		set State.electrical_panel.battery_taken = true
-		do State.electrical_panel.remove_from_group("Interactable")
+		do State.electrical_panel.remove_from_group("Interactable")  # todo: move this logic into the script file
 		=> END
 	- No => END
 
@@ -73,3 +73,12 @@ else:
 		You pry the grate open.
 	- No => END 
 => END
+
+~ computer_wall
+if not State.computer_table.powered:
+	Remote console: ERROR - unable to connect to main control server. Have you tried turning it off and on again?
+	=> END
+if not State.computer_table.puzzle_1_solved:
+	Remote console: ERROR - superuser level required. The incident will be reported. 
+	=> END
+=>

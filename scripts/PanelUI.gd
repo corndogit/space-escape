@@ -1,7 +1,5 @@
 extends PanelContainer
 
-var closable = false
-
 func _ready():
 	var window_size = get_window().get_size_with_decorations()
 	custom_minimum_size.x = window_size.x
@@ -9,7 +7,7 @@ func _ready():
 
 func _on_puzzle_1_puzzle_solved():
 	await get_tree().create_timer(3).timeout
-	State.computer_table.close_puzzle()
+	State.active_puzzle.close_puzzle()
 
 func _on_close_button_pressed():
-	State.computer_table.close_puzzle()
+	State.active_puzzle.close_puzzle()

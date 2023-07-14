@@ -1,14 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpbitbapkrcp"]
+[gd_scene load_steps=5 format=3 uid="uid://dpbitbapkrcp"]
 
 [ext_resource type="Script" path="res://scripts/puzzle_1.gd" id="1_8f3ge"]
 [ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_dr408"]
 [ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_6xl1c"]
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="2_o4b6n"]
-
-[sub_resource type="Curve" id="Curve_y0imh"]
-
-[sub_resource type="CurveTexture" id="CurveTexture_pi76k"]
-curve = SubResource("Curve_y0imh")
 
 [node name="puzzle_1" type="Node2D"]
 
@@ -40,13 +35,6 @@ text = "X"
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 script = ExtResource("1_8f3ge")
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1"]
-custom_minimum_size = Vector2(500, 500)
-layout_mode = 2
-offset_right = 500.0
-offset_bottom = 500.0
-texture = SubResource("CurveTexture_pi76k")
 
 [node name="Control" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1"]
 layout_mode = 1
