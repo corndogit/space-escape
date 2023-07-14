@@ -9,10 +9,11 @@ const DOOR_TILES = {
 	"bottom_right": Vector2(17, 1)
 }
 
+func _ready():
+	State.red_door = self
+
 func interact():
-	print("Interaction with %s" % name)
-	erase()
-	super.interact()
+	DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "red_door")
 
 func erase():
 	for tile in DOOR_TILES.values():

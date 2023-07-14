@@ -8,6 +8,9 @@ const DOOR_TILES = {
 	"bottom_right": Vector2(17, -3)
 }
 
+func _ready():
+	State.blue_door = self
+
 func interact():
 	print("Interaction with %s" % name)
 	erase()

@@ -50,6 +50,9 @@ if State.computer_table.puzzle_1_solved:
 
 ~ red_door
 if not State.computer_table.puzzle_1_solved:
-	Red door: ERROR - access denied, 
-
+	Red door: ERROR - superuser level required. The incident will be reported.
+else:
+	Red door: Superuser level confirmed.
+	do State.red_door.erase()
+	The door unlocks.
 => END
