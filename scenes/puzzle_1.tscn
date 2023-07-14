@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpbitbapkrcp"]
+[gd_scene load_steps=7 format=3 uid="uid://dpbitbapkrcp"]
 
 [ext_resource type="Script" path="res://scripts/puzzle_1.gd" id="1_8f3ge"]
+[ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_dr408"]
 [ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_6xl1c"]
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="2_o4b6n"]
 
@@ -14,6 +15,7 @@ curve = SubResource("Curve_y0imh")
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_right = 500.0
 offset_bottom = 500.0
+theme_override_styles/panel = ExtResource("1_dr408")
 script = ExtResource("2_6xl1c")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
@@ -23,6 +25,16 @@ alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
 alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_o4b6n")
+alignment = 2
+
+[node name="CloseButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "X"
 
 [node name="Puzzle1" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 500)
@@ -143,8 +155,7 @@ Override Access"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="mouse_entered" from="PanelContainer" to="PanelContainer" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="PanelContainer" to="PanelContainer" method="_on_mouse_exited"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]
 [connection signal="puzzle_solved" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1" to="PanelContainer" method="_on_puzzle_1_puzzle_solved"]
 [connection signal="text_changed" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions/Answer1" to="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1" method="_on_answer_text_changed"]
 [connection signal="text_changed" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions/Answer2" to="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1" method="_on_answer_text_changed"]
