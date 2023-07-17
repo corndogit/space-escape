@@ -41,7 +41,7 @@ func _ready():
 # Checks the contents of every LineEdit to see if it matches the key
 func _check_contents(key : String, arr : Array) -> bool:
 	for i in len(arr):
-		if key[i] != arr[i].text:
+		if key[i] != arr[i].text.to_lower():
 			return false
 	return true
 
@@ -55,7 +55,7 @@ func _check_crossword() -> bool:
 
 func _on_button_pressed():
 	if _check_crossword():
-		print("crossword solved")
+		print("crossword solved") # TODO: update global puzzle 2 solved
 		for arr in inputs_dict.values():
 			for node in arr:
 				node.editable = false
