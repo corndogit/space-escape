@@ -24,3 +24,5 @@ func close_puzzle():
 		level.remove_child(puzzle_scene)
 	camera.enabled = true
 	player.in_dialogue = false
+	if puzzle_2_solved:
+		get_node(".").remove_from_group("Interactable")

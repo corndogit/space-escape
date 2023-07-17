@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://2o1jhv11sckc"]
+[gd_scene load_steps=6 format=3 uid="uid://cxeab6jlta8r8"]
 
 [ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_dn85q"]
 [ext_resource type="FontFile" uid="uid://bsgaosfxlitmu" path="res://assets/fonts/dotmatrix.TTF" id="1_pp8s8"]
-[ext_resource type="Script" path="res://scripts/Crossword.gd" id="1_sycct"]
 [ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_lu3sm"]
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="3_sv4kp"]
+[ext_resource type="Script" path="res://scripts/puzzle_2.gd" id="4_2t77g"]
 
 [node name="puzzle_2" type="Node2D"]
 
@@ -61,7 +61,7 @@ alignment = 1
 [node name="Crossword" type="GridContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer"]
 layout_mode = 2
 columns = 10
-script = ExtResource("1_sycct")
+script = ExtResource("4_2t77g")
 
 [node name="input_0-0" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)

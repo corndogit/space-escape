@@ -58,8 +58,8 @@ else:
 
 ~ blue_door
 if not State.computer_wall.puzzle_2_solved:
-	Blue: ERROR - instruction "Open door" not found
-	It seems that the door's logic circuit isn't functioning
+	Blue: ERROR - instruction "Open door" not found.
+	It seems that the door's logic circuit isn't functioning.
 else:
 	Blue door: executing instruction "Open door"...
 	do State.blue_door.erase()
@@ -90,4 +90,6 @@ if not State.computer_table.powered:
 if not State.computer_table.puzzle_1_solved:
 	Remote console: ERROR - superuser level required. The incident will be reported. 
 	=> END
+if State.computer_wall.puzzle_2_solved:
+	The ship's logic circuits are now fully working again.
 => END
