@@ -55,7 +55,8 @@ func _check_crossword() -> bool:
 
 func _on_button_pressed():
 	if _check_crossword():
-		print("crossword solved") # TODO: update global puzzle 2 solved
+		State.computer_wall.puzzle_2_solved = true
 		for arr in inputs_dict.values():
 			for node in arr:
 				node.editable = false
+		DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "computer_wall")
