@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3ycex01efoyt"]
+[gd_scene load_steps=5 format=3 uid="uid://d3ycex01efoyt"]
 
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="1_e7lgk"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_rfioe"]
 [ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="2_wmbj7"]
+[ext_resource type="Texture2D" uid="uid://dew8yofbltyu3" path="res://assets/textures/items/help.png" id="4_en6en"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -33,5 +34,29 @@ text = "00:00
 wait_time = 900.0
 one_shot = true
 autostart = true
+
+[node name="Help" type="HBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0.776471)
+layout_mode = 0
+offset_left = 319.0
+offset_top = 174.0
+offset_right = 392.0
+offset_bottom = 208.0
+scale = Vector2(0.674217, 0.674217)
+alignment = 1
+
+[node name="Label" type="Label" parent="Help"]
+layout_mode = 2
+theme = ExtResource("1_e7lgk")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "H"
+
+[node name="Icon" type="TextureRect" parent="Help"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("4_en6en")
 
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]

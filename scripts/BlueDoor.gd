@@ -2,10 +2,10 @@ extends Interactable
 
 @onready var tilemap : TileMap = get_parent().get_node("TileMap")
 const DOOR_TILES = {
-	"top_left": Vector2(16, -4),
-	"bottom_left": Vector2(16, -3),
-	"top_right": Vector2(17, -4),
-	"bottom_right": Vector2(17, -3)
+	"top_left": Vector2(16, -2),
+	"bottom_left": Vector2(16, -1),
+	"top_right": Vector2(17, -2),
+	"bottom_right": Vector2(17, -1)
 }
 var puzzle_2_solved : bool = false
 

@@ -6,6 +6,7 @@ func _ready():
 	custom_minimum_size.y = window_size.y
 
 func _on_puzzle_1_puzzle_solved():
+	DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "computer_table")
 	await get_tree().create_timer(3).timeout
 	State.active_puzzle.close_puzzle()
 

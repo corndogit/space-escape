@@ -1,6 +1,7 @@
 extends Interactable
 
 var puzzle_scene = preload("res://scenes/puzzle_2.tscn").instantiate()
+var puzzle_2_solved : bool = false
 @onready var level = get_parent()
 @onready var player = level.get_node("Player")
 @onready var camera = player.get_node("Camera2D")

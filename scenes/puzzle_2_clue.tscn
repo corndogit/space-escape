@@ -76,3 +76,5 @@ CatGPT has infiltrated our systems, wreaking hav[color=#ff3]o[/color][b]C[/b] on
 Th[color=#aaf]e[/color] fate of [color=#aaf]the[/color] Enterprise and countless lives hang in the balance as we engage in this high-stakes battle of wits and technology.
 
 Captain Jonathan T. Baxte[color=#aaf]r[/color], out."
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]

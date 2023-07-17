@@ -5,7 +5,10 @@ extends CharacterBody2D
 @onready var sprite : AnimatedSprite2D = get_node("AnimatedSprite2D")
 @onready var sight : RayCast2D = get_node("Sight")
 @onready var indicator : Label = get_node("Indicator")
+@onready var camera : Camera2D = get_node("Camera2D")
+var handbook_scene = preload("res://scenes/handbook.tscn").instantiate()
 var in_dialogue : bool = false
+var in_handbook : bool = false
 
 func _process(delta):
 	_calculate_movement(speed * delta)
@@ -14,9 +17,12 @@ func _process(delta):
 func _unhandled_input(_event):
 	if Input.is_key_pressed(KEY_E) and _check_for_interactable() and not in_dialogue:
 		_player_interact(sight.get_collider())
+	
+	elif Input.is_key_pressed(KEY_H) and not in_dialogue:
+		show_player_handbook()
 
 func _calculate_movement(diff : float):
-	if in_dialogue:  # disable movement during dialogue
+	if in_dialogue or in_handbook:  # disable movement during dialogue
 		sprite.play("idle")
 		return
 		
@@ -64,3 +70,14 @@ func _player_interact(target):
 	target.interact()
 	await DialogueManager.dialogue_ended
 	in_dialogue= false
+	
+func show_player_handbook():
+	if not in_handbook:
+		add_child(handbook_scene)
+		camera.enabled = false
+		in_handbook = true
+	else:
+		remove_child(handbook_scene)
+		camera.enabled = true
+		in_handbook = false
+

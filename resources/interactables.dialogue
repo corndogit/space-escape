@@ -37,15 +37,14 @@ if not State.computer_table.powered:
 			You insert the battery.
 			if not State.broken_pipe.battery_charged:
 				Computer: ERROR - External power source voltage is too low!
+				You removed the battery. Maybe there is somewhere to charge it nearby?
 			else:
 				The computer turns on.
 				set State.computer_table.powered = true
 		- No => END
 if State.computer_table.puzzle_1_solved:
-	Computer: Welcome superuser, please select an action below.
-	- View captain's log
-		Now loading latest captain's log...
-	- Close => END
+	Computer: Welcome, superuser, now displaying the latest captain's log...
+	You can now interact with the table again to view the captain's log.
 => END
 
 ~ red_door
@@ -62,7 +61,7 @@ if not State.computer_wall.puzzle_2_solved:
 	Blue: ERROR - instruction "Open door" not found
 	It seems that the door's logic circuit isn't functioning
 else:
-	Blue door: Log
+	Blue door: executing instruction "Open door"...
 	do State.blue_door.erase()
 	The door unlocks.
 => END
@@ -71,12 +70,12 @@ else:
 do State.crowbar.sprite.queue_free()
 You picked up the crowbar.
 do State.crowbar.pickup()
-
 => END
 
 ~ grate
 if not State.crowbar.taken:
 	It's a metal grate. It's too heavy to move with your hands alone.
+	You can just barely spot a small object on the other side.
 else:
 	Use the crowbar?
 	- Yes
