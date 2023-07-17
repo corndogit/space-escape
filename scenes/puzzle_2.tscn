@@ -69,6 +69,7 @@ layout_mode = 2
 theme_override_constants/minimum_character_width = 1
 theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
+text = "t"
 alignment = 1
 max_length = 1
 
@@ -78,6 +79,7 @@ layout_mode = 2
 theme_override_constants/minimum_character_width = 1
 theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
+text = "i"
 alignment = 1
 max_length = 1
 
@@ -87,6 +89,7 @@ layout_mode = 2
 theme_override_constants/minimum_character_width = 1
 theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
+text = "e"
 alignment = 1
 max_length = 1
 
@@ -96,6 +99,7 @@ layout_mode = 2
 theme_override_constants/minimum_character_width = 1
 theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
+text = "r"
 alignment = 1
 max_length = 1
 
