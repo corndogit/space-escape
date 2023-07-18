@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0wsjft2wn83j"]
+
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="1_ka3vh"]
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_oir3m"]
+[ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="2_5hprm"]
+
+[node name="win_screen" type="Node2D"]
+script = ExtResource("1_oir3m")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_ka3vh")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 2
+offset_right = 1154.0
+offset_bottom = 648.0
+theme_override_styles/panel = ExtResource("2_5hprm")
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Win" type="Label" parent="Control/PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "You win!"
+horizontal_alignment = 1
+
+[node name="TimeTaken" type="Label" parent="Control/PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Time taken:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Exit" type="Button" parent="Control/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="Control/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]

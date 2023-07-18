@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ntfl8gjkgctg"]
+[gd_scene load_steps=35 format=3 uid="uid://ntfl8gjkgctg"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/tileset_x16.png" id="1_g6cqr"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://scripts/Crowbar.gd" id="15_2fpg3"]
 [ext_resource type="Texture2D" uid="uid://b141mm56glqel" path="res://assets/textures/items/crowbar.png" id="16_4u20u"]
 [ext_resource type="Script" path="res://scripts/Thruster.gd" id="17_aln6p"]
+[ext_resource type="Script" path="res://scripts/CatGPTInteractable.gd" id="17_tvea7"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_t4g4p"]
 tile_data = PackedInt32Array(0, 1310720, 18, 65536, 1310720, 19, 131072, 1310720, 20, 196608, 1310720, 21, 1, 1376256, 18, 65537, 1376256, 19, 131073, 1376256, 20, 196609, 1376256, 21, 2, 1441792, 18, 65538, 1441792, 19, 131074, 1441792, 20, 196610, 1441792, 21, 3, 1507328, 18, 65539, 1507328, 19, 131075, 1507328, 20, 196611, 1507328, 21)
@@ -1487,6 +1488,9 @@ radius = 14.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ki0it"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr5qf"]
+size = Vector2(30, 30)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_guwf4"]
 atlas = ExtResource("1_g6cqr")
 region = Rect2(224, 256, 56, 32)
@@ -1555,6 +1559,7 @@ script = ExtResource("4_hx4oo")
 
 [node name="Player" parent="." instance=ExtResource("5_ypggi")]
 position = Vector2(960, 498)
+collision_priority = 5.0
 speed = 150.0
 
 [node name="BrokenPipe" type="StaticBody2D" parent="." groups=["Interactable"]]
@@ -1647,6 +1652,15 @@ shape = SubResource("RectangleShape2D_ki0it")
 
 [node name="Sprite2D" type="Sprite2D" parent="Crowbar"]
 texture = ExtResource("16_4u20u")
+
+[node name="CatGPT" type="StaticBody2D" parent="." groups=["Interactable"]]
+position = Vector2(958, 264)
+collision_layer = 2
+script = ExtResource("17_tvea7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatGPT"]
+position = Vector2(-3, -2)
+shape = SubResource("RectangleShape2D_vr5qf")
 
 [node name="Thruster1" type="AnimatedSprite2D" parent="."]
 position = Vector2(830, 320)
