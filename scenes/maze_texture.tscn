@@ -1,0 +1,195 @@
+[gd_scene load_steps=3 format=3 uid="uid://ugmtg81kmv2q"]
+
+[ext_resource type="Texture2D" uid="uid://cxsoalnusu66q" path="res://assets/textures/puzzle_3_maze.png" id="1_0gvng"]
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="2_loelp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MazeTexture" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(400, 400)
+texture = ExtResource("1_0gvng")
+
+[node name="1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 214.0
+offset_right = 323.0
+offset_bottom = 248.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "1"
+
+[node name="2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 49.0
+offset_right = 219.0
+offset_bottom = 83.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "2"
+
+[node name="3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 287.0
+offset_right = 205.0
+offset_bottom = 321.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "3"
+
+[node name="4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 172.0
+offset_right = 385.0
+offset_bottom = 206.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "4"
+
+[node name="5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 317.0
+offset_right = 321.0
+offset_bottom = 351.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "5"
+
+[node name="6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 171.0
+offset_right = 117.0
+offset_bottom = 205.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "6
+"
+
+[node name="7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 50.0
+offset_right = 315.0
+offset_bottom = 84.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "7"
+
+[node name="8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 46.0
+offset_right = 124.0
+offset_bottom = 80.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "8"
+
+[node name="9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 350.0
+offset_right = 196.0
+offset_bottom = 384.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "9"
+
+[node name="A" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 247.0
+offset_right = 67.0
+offset_bottom = 281.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "A"
+
+[node name="B" type="Label" parent="."]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 253.0
+offset_right = 374.0
+offset_bottom = 287.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "B"
+
+[node name="C" type="Label" parent="."]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 125.0
+offset_right = 257.0
+offset_bottom = 159.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "C"
+
+[node name="D" type="Label" parent="."]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 305.0
+offset_right = 283.0
+offset_bottom = 339.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "D"
+
+[node name="E" type="Label" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 119.0
+offset_right = 65.0
+offset_bottom = 153.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "E"
+
+[node name="F" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 220.0
+offset_right = 285.0
+offset_bottom = 254.0
+theme = ExtResource("2_loelp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+text = "F"

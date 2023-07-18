@@ -1546,8 +1546,10 @@ script = ExtResource("4_hx4oo")
 
 [node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/Layer1"]
 modulate = Color(1, 1, 1, 0)
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = 214.0
+offset_top = -148.0
+offset_right = 2134.0
+offset_bottom = 932.0
 texture = ExtResource("3_1puyj")
 script = ExtResource("4_hx4oo")
 

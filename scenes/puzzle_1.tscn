@@ -29,6 +29,7 @@ alignment = 2
 [node name="CloseButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+tooltip_text = "Close"
 text = "X"
 
 [node name="Puzzle1" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer"]
@@ -60,6 +61,8 @@ alignment = 1
 custom_minimum_size = Vector2(150, 49)
 layout_mode = 2
 theme = ExtResource("2_o4b6n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
 bbcode_enabled = true
 text = "A [font=assets/fonts/glipervelz.ttf]A[/font] 4 ="
 scroll_active = false
@@ -68,6 +71,8 @@ scroll_active = false
 custom_minimum_size = Vector2(150, 49)
 layout_mode = 2
 theme = ExtResource("2_o4b6n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
 bbcode_enabled = true
 text = "7 [font=assets/fonts/glipervelz.ttf]B[/font] C ="
 scroll_active = false
@@ -76,6 +81,8 @@ scroll_active = false
 custom_minimum_size = Vector2(150, 49)
 layout_mode = 2
 theme = ExtResource("2_o4b6n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
 bbcode_enabled = true
 text = "6 [font=assets/fonts/glipervelz.ttf]C[/font] D ="
 scroll_active = false
@@ -84,6 +91,8 @@ scroll_active = false
 custom_minimum_size = Vector2(150, 49)
 layout_mode = 2
 theme = ExtResource("2_o4b6n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
 bbcode_enabled = true
 text = "9 [font=assets/fonts/glipervelz.ttf]D[/font] F ="
 scroll_active = false
@@ -138,6 +147,8 @@ offset_top = 9.0
 offset_right = 464.0
 offset_bottom = 158.0
 theme = ExtResource("2_o4b6n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 8
 text = "Superuser 
 Override Access"
 horizontal_alignment = 1

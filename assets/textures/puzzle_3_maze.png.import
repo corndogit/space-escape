@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cen8406qij6ee"
-path="res://.godot/imported/clue.png-42c536c457fb9aae0f9f09ef656d652d.ctex"
+uid="uid://cxsoalnusu66q"
+path="res://.godot/imported/puzzle_3_maze.png-bdc24ef782f5a382e8119941c3749182.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/puzzle_1/clue.png"
-dest_files=["res://.godot/imported/clue.png-42c536c457fb9aae0f9f09ef656d652d.ctex"]
+source_file="res://assets/textures/puzzle_3_maze.png"
+dest_files=["res://.godot/imported/puzzle_3_maze.png-bdc24ef782f5a382e8119941c3749182.ctex"]
 
 [params]
 

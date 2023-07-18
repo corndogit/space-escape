@@ -1,3 +1,80 @@
-[gd_scene format=3 uid="uid://bl8a116pykpvb"]
+[gd_scene load_steps=6 format=3 uid="uid://bl8a116pykpvb"]
+
+[ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_71mde"]
+[ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_7uag8"]
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="3_xitru"]
+[ext_resource type="PackedScene" uid="uid://ugmtg81kmv2q" path="res://scenes/maze_texture.tscn" id="4_1re8p"]
+[ext_resource type="Script" path="res://scripts/puzzle_3.gd" id="5_7daa2"]
 
 [node name="puzzle_3" type="Node2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = ExtResource("1_71mde")
+script = ExtResource("2_7uag8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="PuzzleVBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_xitru")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Disk Sector Check"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MazeTexture" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer" instance=ExtResource("4_1re8p")]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+
+[node name="PuzzleInput" type="Control" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+script = ExtResource("5_7daa2")
+
+[node name="InputField" type="TextEdit" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput"]
+custom_minimum_size = Vector2(50, 52)
+layout_mode = 2
+offset_left = 103.0
+offset_top = -1.0
+offset_right = 303.0
+offset_bottom = 57.0
+theme = ExtResource("3_xitru")
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 63.0
+offset_right = 274.0
+offset_bottom = 112.0
+theme = ExtResource("3_xitru")
+theme_override_font_sizes/font_size = 24
+text = "Submit"
+
+[node name="CloseButtonContainer" type="BoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/CloseButtonContainer"]
+layout_mode = 2
+
+[node name="Padding" type="Control" parent="PanelContainer/HBoxContainer/CloseButtonContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="PanelContainer/HBoxContainer/CloseButtonContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+tooltip_text = "Close"
+theme = ExtResource("3_xitru")
+text = "X"
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput/Button" to="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput" method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/CloseButtonContainer/VBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]
