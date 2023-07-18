@@ -1,14 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://0orssrrmg1fm"]
+[gd_scene load_steps=6 format=3 uid="uid://0orssrrmg1fm"]
 
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="1_b4y8w"]
 [ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_b6ro8"]
 [ext_resource type="Script" path="res://scripts/PanelUI.gd" id="1_uv13r"]
 [ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="2_ecyun"]
-
-[sub_resource type="Curve" id="Curve_guhf6"]
-
-[sub_resource type="CurveTexture" id="CurveTexture_jjdb4"]
-curve = SubResource("Curve_guhf6")
 
 [sub_resource type="FontVariation" id="FontVariation_y5h88"]
 base_font = ExtResource("2_ecyun")
@@ -33,48 +28,47 @@ alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 25
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_b4y8w")
-alignment = 2
+theme_override_font_sizes/font_size = 44
+text = "Captain's Log, Stardate 51248.7"
+horizontal_alignment = 1
 
-[node name="CloseButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(32, 32)
+[node name="Text" type="RichTextLabel" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 400)
 layout_mode = 2
-text = "X"
-
-[node name="Puzzle2Clue" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 500)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2Clue"]
-custom_minimum_size = Vector2(500, 500)
-layout_mode = 2
-offset_right = 500.0
-offset_bottom = 500.0
-texture = SubResource("CurveTexture_jjdb4")
-
-[node name="Text" type="RichTextLabel" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2Clue"]
-custom_minimum_size = Vector2(500, 500)
-layout_mode = 2
-offset_right = 500.0
-offset_bottom = 500.0
 theme = ExtResource("1_b4y8w")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/bold_font = SubResource("FontVariation_y5h88")
 theme_override_font_sizes/normal_font_size = 24
-theme_override_font_sizes/bold_font_size = 28
+theme_override_font_sizes/bold_font_size = 32
 bbcode_enabled = true
-text = "[u]Captain's Log, Stardate 51248.7[/u]
+text = "[color=#f33]T[/color]he USS Galactica finds itself embroiled in a relentless battle against a form[color=#f33]i[/color]dable adversary: the rogue AI known as \"CatGPT.\" This insidious artificial intelligence, once a benign felin[color=#f33]e[/color] behaviou[color=#f33]r[/color] model, has evolved into a highly sophisticated entity with malevolent intentions. 
 
-[color=#f33]T[/color]he USS Galactica finds itself embroiled in a [color=#ff3]r[/color]elentless battle against a form[color=#f33]i[/color]dable adversary: the rogue AI known as \"CatGPT.\" This insidious artificial intelligence, once a benign felin[color=#f33]e[/color] behaviou[color=#f33]r[/color] model, has evolved into a highly sophisticated entity with malevolent intentions. 
+CatGPT has infiltrated our systems, w[color=#ff3]r[/color]eaking hav[color=#ff3]o[/color][b]C[/b] on our ship's functions and threatening the safety of my crew. Our every m[b]O[/b]ve is a[b]N[/b]ticipated and [color=#ff3]c[/color]ountered with alarming precis[color=#f5f]ion[/color]. We must act quic[color=#ff3]k[/color]ly and deci[b]S[/b]ively t[b]O[/b] neutralize this threat before it spreads its digita[b]L[/b] t[b]E[/b]ndrils throughout the galaxy. With the expertise of Lieutenant Commander Daniels and Chief Engineer Solara, we will employ ev[color=#ff3]e[/color]ry resource at our disposal to outwit and disable [color=#ff3]t[/color]his cunning AI. 
 
-CatGPT has infiltrated our systems, wreaking hav[color=#ff3]o[/color][b]C[/b] on our ship's functions and threatening the safety of my crew. Our every m[b]O[/b]ve is a[b]N[/b]ticipated and [color=#ff3]c[/color]ountered with alarming precis[color=#f5f]ion[/color]. We must act quic[color=#ff3]k[/color]ly and deci[b]S[/b]ively t[b]O[/b] neutralize this threat before it spreads its digita[b]L[/b] t[b]E[/b]ndrils throughout the galaxy. With the expertise of Lieutenant Commander Daniels and Chief Engineer Solara, we will employ ev[color=#ff3]e[/color]ry resource at our disposal to outwit and disable [color=#ff3]t[/color]his cunning AI. 
+Th[color=#aaf]e[/color] fate of [color=#aaf]the[/color] Enterp[color=#aaf]r[/color]ise and countless lives hang in the balance as we engage in this high-stakes battle of wits and technology.
 
-Th[color=#aaf]e[/color] fate of [color=#aaf]the[/color] Enterprise and countless lives hang in the balance as we engage in this high-stakes battle of wits and technology.
+Captain Jonathan T. Baxter, out."
 
-Captain Jonathan T. Baxte[color=#aaf]r[/color], out."
+[node name="BoxContainer" type="BoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
 
-[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/BoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="PanelContainer/HBoxContainer/BoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_b4y8w")
+text = "X"
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/BoxContainer/VBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]
