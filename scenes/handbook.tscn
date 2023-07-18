@@ -1,7 +1,92 @@
-[gd_scene format=3 uid="uid://cnplf7w36utvx"]
+[gd_scene load_steps=6 format=3 uid="uid://cnplf7w36utvx"]
+
+[ext_resource type="Texture2D" uid="uid://i176mafmr2tw" path="res://assets/textures/background/crt_bg.png" id="1_il5dn"]
+[ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_f0x6d"]
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="3_84tro"]
+[ext_resource type="Texture2D" uid="uid://dew8yofbltyu3" path="res://assets/textures/items/help.png" id="4_b3moq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xerfq"]
+texture = ExtResource("1_il5dn")
+modulate_color = Color(0.533333, 0.533333, 0.533333, 1)
 
 [node name="handbook" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xerfq")
+script = ExtResource("2_f0x6d")
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/CenterContainer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme = ExtResource("3_84tro")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 44
+text = "Space Engineer's Guide to the Galaxy"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_b3moq")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme = ExtResource("3_84tro")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Following the Solar System's accession into the Galactic Federation, we have adopted new navigational standards which are denoted in this guide.
+
+[font_size=28]Numbers:[/font_size]
+[ul]
+0 - 9 represent 0-9 (as usual)
+A, B, C, D, E and F represent 10, 11, 12, 13, 14 and 15[/ul]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme = ExtResource("3_84tro")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[font_size=28]Arithmetic:[/font_size]
+[ul]
+[font=res://assets/fonts/glipervelz.ttf][font_size=40]A[/font_size][/font] = add together, then halve the result
+[font=res://assets/fonts/glipervelz.ttf][font_size=40]B[/font_size][/font] = subtract right from left, then flip the +/- sign
+[font=res://assets/fonts/glipervelz.ttf][font_size=40]C[/font_size][/font] = multiply together, divide by 10 and round down
+[font=res://assets/fonts/glipervelz.ttf][font_size=40]D[/font_size][/font] = add together, add 1 and divide by 5
+[/ul]
+
+[font_size=18]Press H to open or close this guide.[/font_size]"
+fit_content = true

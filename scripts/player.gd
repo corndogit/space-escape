@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var sight : RayCast2D = get_node("Sight")
 @onready var indicator : Label = get_node("Indicator")
 @onready var camera : Camera2D = get_node("Camera2D")
+@onready var level = get_parent()
 var handbook_scene = preload("res://scenes/handbook.tscn").instantiate()
 var in_dialogue : bool = false
 var in_handbook : bool = false
@@ -73,11 +74,11 @@ func _player_interact(target):
 	
 func show_player_handbook():
 	if not in_handbook:
-		add_child(handbook_scene)
+		level.add_child(handbook_scene)
 		camera.enabled = false
 		in_handbook = true
 	else:
-		remove_child(handbook_scene)
+		level.remove_child(handbook_scene)
 		camera.enabled = true
 		in_handbook = false
 
