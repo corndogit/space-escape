@@ -48,6 +48,7 @@ if State.computer_table.puzzle_1_solved:
 => END
 
 ~ red_door
+This is the first door leading to the main computer room. It seems like CatGPT has activated the security lockdown mode.
 if not State.computer_table.puzzle_1_solved:
 	Red door: ERROR - superuser level required. The incident will be reported.
 else:
@@ -58,10 +59,10 @@ else:
 
 ~ blue_door
 if not State.computer_wall.puzzle_2_solved:
-	Blue: ERROR - instruction "Open door" not found.
+	Blue: ERROR - Instruction "Open door" not found.
 	It seems that the door's logic circuit isn't functioning.
 else:
-	Blue door: executing instruction "Open door"...
+	Blue door: Executing instruction "Open door"...
 	do State.blue_door.erase()
 	The door unlocks.
 => END
@@ -74,13 +75,19 @@ do State.crowbar.pickup()
 
 ~ grate
 if not State.crowbar.taken:
-	It's a metal grate. It's too heavy to move with your hands alone.
-	You can just barely spot a small object on the other side.
-else:
+	It's a metal grate. You can just barely spot a small object on the other side.
+if not State.computer_wall.puzzle_2_solved:
+	Now isn't the time to mess around with this!
+	=> END
+if State.crowbar.taken:
 	Use the crowbar?
 	- Yes
-		You pry the grate open.
+		You pry the grate open and pick up the small object inside.
+		The object is a USB stick labelled "YellOS Boot Device". 
+		do State.grate.take_usb()
 	- No => END 
+else:
+	It's too heavy to move with your hands alone.
 => END
 
 ~ computer_wall
