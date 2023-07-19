@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpjwavqreb3ng"
-path="res://.godot/imported/tileset_x16.png-dd2e8449d40b00d4f38b13a7ee52a55d.ctex"
+uid="uid://dkt57fe845ypv"
+path="res://.godot/imported/WASD.png-2c8625ec746a264cc8c8f7bcbaae59fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/tileset_x16.png"
-dest_files=["res://.godot/imported/tileset_x16.png-dd2e8449d40b00d4f38b13a7ee52a55d.ctex"]
+source_file="res://assets/textures/ui/WASD.png"
+dest_files=["res://.godot/imported/WASD.png-2c8625ec746a264cc8c8f7bcbaae59fa.ctex"]
 
 [params]
 

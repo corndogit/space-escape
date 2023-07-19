@@ -1,6 +1,6 @@
-[gd_scene load_steps=35 format=3 uid="uid://ntfl8gjkgctg"]
+[gd_scene load_steps=35 format=3 uid="uid://csanmktbgn121"]
 
-[ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/tileset_x16.png" id="1_g6cqr"]
+[ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/background/tileset_x16.png" id="1_n2fmg"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
 [ext_resource type="Texture2D" uid="uid://b8ukh6sdpnnhy" path="res://assets/textures/background/bg.png" id="2_tvfgn"]
 [ext_resource type="Texture2D" uid="uid://6gjrpgwoabjh" path="res://assets/textures/background/bg_animate0.png" id="3_1puyj"]
@@ -29,7 +29,7 @@ tile_data = PackedInt32Array(0, 1310720, 18, 65536, 1310720, 19, 131072, 1310720
 tile_data = PackedInt32Array(0, 393216, 20, 65536, 393216, 21, 131072, 393216, 22, 196608, 393216, 23, 1, 458752, 20, 65537, 458752, 21, 131073, 458752, 22, 196609, 458752, 23, 2, 524288, 20, 65538, 524288, 21, 131074, 524288, 22, 196610, 524288, 23, 3, 589824, 20, 65539, 589824, 21, 131075, 589824, 22, 196611, 589824, 23)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iya0x"]
-texture = ExtResource("1_g6cqr")
+texture = ExtResource("1_n2fmg")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1492,11 +1492,11 @@ radius = 14.0
 size = Vector2(30, 30)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_guwf4"]
-atlas = ExtResource("1_g6cqr")
+atlas = ExtResource("1_n2fmg")
 region = Rect2(224, 256, 56, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tdgnc"]
-atlas = ExtResource("1_g6cqr")
+atlas = ExtResource("1_n2fmg")
 region = Rect2(224, 224, 56, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bcbkt"]

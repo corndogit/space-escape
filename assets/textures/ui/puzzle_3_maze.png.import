@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkt57fe845ypv"
-path="res://.godot/imported/WASD.png-2ad73d8c45fcbca440bf60b26cc83327.ctex"
+uid="uid://cxsoalnusu66q"
+path="res://.godot/imported/puzzle_3_maze.png-8081da08e5352fd5406286a0e32cef7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/WASD.png"
-dest_files=["res://.godot/imported/WASD.png-2ad73d8c45fcbca440bf60b26cc83327.ctex"]
+source_file="res://assets/textures/ui/puzzle_3_maze.png"
+dest_files=["res://.godot/imported/puzzle_3_maze.png-8081da08e5352fd5406286a0e32cef7b.ctex"]
 
 [params]
 

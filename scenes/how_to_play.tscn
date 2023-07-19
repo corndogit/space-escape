@@ -1,10 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://x1pjhmy64v4k"]
+[gd_scene load_steps=34 format=3]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_xhvad"]
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="2_wbcts"]
 [ext_resource type="Texture2D" uid="uid://b8ukh6sdpnnhy" path="res://assets/textures/background/bg.png" id="3_qyhbf"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="4_8car7"]
-[ext_resource type="Texture2D" uid="uid://dkt57fe845ypv" path="res://assets/textures/WASD.png" id="4_olnq8"]
+[ext_resource type="Texture2D" uid="uid://dkt57fe845ypv" path="res://assets/textures/ui/WASD.png" id="4_olnq8"]
 [ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="5_4al5w"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ki0f"]

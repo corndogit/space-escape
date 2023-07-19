@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxsoalnusu66q"
-path="res://.godot/imported/puzzle_3_maze.png-bdc24ef782f5a382e8119941c3749182.ctex"
+uid="uid://dpjwavqreb3ng"
+path="res://.godot/imported/tileset_x16.png-9441cd1154d4977efc44765055eb180b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/puzzle_3_maze.png"
-dest_files=["res://.godot/imported/puzzle_3_maze.png-bdc24ef782f5a382e8119941c3749182.ctex"]
+source_file="res://assets/textures/background/tileset_x16.png"
+dest_files=["res://.godot/imported/tileset_x16.png-9441cd1154d4977efc44765055eb180b.ctex"]
 
 [params]
 

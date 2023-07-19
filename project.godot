@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerInventory="*res://scripts/autoload/player_inventory.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://scripts/autoload/state.gd"
 
