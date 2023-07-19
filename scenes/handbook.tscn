@@ -32,7 +32,7 @@ theme_override_constants/separation = 15
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
-alignment = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(600, 0)
@@ -55,7 +55,7 @@ layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(450, 0)
 layout_mode = 2
 theme = ExtResource("3_84tro")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -73,7 +73,7 @@ scroll_active = false
 autowrap_mode = 2
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(450, 0)
 layout_mode = 2
 theme = ExtResource("3_84tro")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -84,9 +84,10 @@ text = "[font_size=28]Arithmetic:[/font_size]
 [ul]
 [font=res://assets/fonts/glipervelz.ttf][font_size=40]A[/font_size][/font] = add together, then halve the result
 [font=res://assets/fonts/glipervelz.ttf][font_size=40]B[/font_size][/font] = subtract right from left, then flip the +/- sign
-[font=res://assets/fonts/glipervelz.ttf][font_size=40]C[/font_size][/font] = multiply together, divide by 10 and round down
+[font=res://assets/fonts/glipervelz.ttf][font_size=40]C[/font_size][/font] = multiply together, divide by 10 and round up
 [font=res://assets/fonts/glipervelz.ttf][font_size=40]D[/font_size][/font] = add together, add 1 and divide by 5
 [/ul]
 
 [font_size=18]Press H to open or close this guide.[/font_size]"
 fit_content = true
+scroll_active = false

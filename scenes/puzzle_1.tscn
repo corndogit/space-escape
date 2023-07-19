@@ -74,7 +74,7 @@ theme = ExtResource("2_o4b6n")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 bbcode_enabled = true
-text = "7 [font=assets/fonts/glipervelz.ttf]B[/font] C ="
+text = "9 [font=assets/fonts/glipervelz.ttf]B[/font] C ="
 scroll_active = false
 
 [node name="Question3" type="RichTextLabel" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/questions"]
@@ -84,7 +84,7 @@ theme = ExtResource("2_o4b6n")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 4
 bbcode_enabled = true
-text = "6 [font=assets/fonts/glipervelz.ttf]C[/font] D ="
+text = "B [font=assets/fonts/glipervelz.ttf]C[/font] 5 ="
 scroll_active = false
 
 [node name="Question4" type="RichTextLabel" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/questions"]

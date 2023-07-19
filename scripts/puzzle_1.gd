@@ -3,7 +3,7 @@ extends Control
 @onready var solutions_element : VBoxContainer= get_node("Control/solutions")
 @onready var result : Label = get_node("Control/solutions/Result")
 @onready var title : Label = get_node("Title")
-const CORRECT_ANSWER : String = "7275"
+const CORRECT_ANSWER : String = "7365"
 var input_fields : Array = []
 signal puzzle_solved
 
@@ -31,7 +31,6 @@ func _check_result():
 		title.text = "Access granted"
 		for field in input_fields:
 			field.editable = false
+		await get_tree().create_timer(1.0).timeout
 		State.computer_table.puzzle_1_solved = true
-		emit_signal("puzzle_solved")
-		
-	
+		DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "computer_table")
