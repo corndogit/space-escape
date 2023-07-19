@@ -6,15 +6,16 @@ extends Node2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if player.position.x > -5000:
+	if player.position.x > -500:
 		player.position.x -= animation_speed * delta
-	if sprite.rotation_degrees < 36000:
 		sprite.rotation_degrees += animation_speed * delta
-
+	else:
+		player.position = Vector2(1184, 430)
+		sprite.rotation = 0
 
 func _on_retry_pressed():
 	get_tree().change_scene_to_file("res://scenes/level.tscn")
 
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://scenes/title.tscn")
+	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
