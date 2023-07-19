@@ -10,5 +10,6 @@ var computer_table : Node
 var computer_wall : Node
 var crowbar : Node
 var grate : Node
+var time_taken : String = "00:00"
 
 var active_puzzle : Interactable  # the currently opened puzzle scene

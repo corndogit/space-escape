@@ -1,8 +1,9 @@
 extends Node2D
 
-# Called when the node enters the scene tree for the first time.
+@onready var time_taken_label = get_node("Control/PanelContainer/CenterContainer/VBoxContainer/TimeTaken")
+
 func _ready():
-	pass # Replace with function body.
+	time_taken_label.text = time_taken_label.text % State.time_taken
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

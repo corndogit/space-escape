@@ -1,14 +1,15 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+@onready var player : Node2D = get_node("Player")
+@onready var sprite : AnimatedSprite2D = get_node("Player/AnimatedSprite2D")
+@export var animation_speed : float = 30.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if player.position.x > -5000:
+		player.position.x -= animation_speed * delta
+	if sprite.rotation_degrees < 36000:
+		sprite.rotation_degrees += animation_speed * delta
 
 
 func _on_retry_pressed():
