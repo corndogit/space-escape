@@ -3,7 +3,7 @@
 [ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_71mde"]
 [ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_7uag8"]
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="3_xitru"]
-[ext_resource type="PackedScene" uid="uid://ugmtg81kmv2q" path="res://scenes/maze_texture.tscn" id="4_1re8p"]
+[ext_resource type="PackedScene" path="res://scenes/maze_texture.tscn" id="4_1re8p"]
 [ext_resource type="Script" path="res://scripts/puzzle_3.gd" id="5_7daa2"]
 
 [node name="puzzle_3" type="Node2D"]
@@ -31,9 +31,24 @@ text = "Disk Sector Check"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MazeTexture" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer" instance=ExtResource("4_1re8p")]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer"]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
+
+[node name="MazeTexture" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer/AspectRatioContainer" instance=ExtResource("4_1re8p")]
+visible = false
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+
+[node name="Error" type="Label" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer/AspectRatioContainer"]
+layout_mode = 2
+theme = ExtResource("3_xitru")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Error:
+YellOS Boot
+Device not found!"
+horizontal_alignment = 1
 
 [node name="PuzzleInput" type="Control" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer"]
 custom_minimum_size = Vector2(0, 150)
@@ -76,5 +91,6 @@ tooltip_text = "Close"
 theme = ExtResource("3_xitru")
 text = "X"
 
+[connection signal="tree_entered" from="." to="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput" method="_on_puzzle_3_tree_entered"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput/Button" to="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput" method="_on_button_pressed"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/CloseButtonContainer/VBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]
