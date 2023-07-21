@@ -31,7 +31,7 @@ func _ready():
 			get_node("input_1-7"),
 			get_node("input_2-7"),
 			get_node("input_3-7")],
-		"ether": [
+		"other": [
 			get_node("input_4-0"),
 			get_node("input_4-1"),
 			get_node("input_4-2"),
