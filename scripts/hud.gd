@@ -9,9 +9,6 @@ extends Control
 func _ready():
 	timer_warning.wait_time = timer.wait_time * 0.8
 	timer_warning.start()
-	_on_warning_timer_timeout()
-	await get_tree().create_timer(5.0).timeout
-	_on_danger_timer_timeout()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
