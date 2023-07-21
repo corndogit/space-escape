@@ -5,6 +5,7 @@ var puzzle_2_solved : bool = false
 @onready var level = get_parent()
 @onready var player = level.get_node("Player")
 @onready var camera = player.get_node("Camera2D")
+@onready var close_sfx : AudioStreamPlayer = get_node_or_null("CloseSFX")
 
 func _ready():
 	State.computer_wall = self
@@ -22,6 +23,8 @@ func interact():
 func close_puzzle():
 	player.in_puzzle = false
 	puzzle_scene.visible = false
+	if close_sfx is AudioStreamPlayer:
+		close_sfx.play()
 	if level.get_node_or_null(puzzle_scene.get_path()):
 		level.remove_child(puzzle_scene)
 	camera.enabled = true

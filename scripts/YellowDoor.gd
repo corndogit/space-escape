@@ -4,6 +4,7 @@ extends Interactable
 @onready var level = get_parent()
 @onready var player = level.get_node("Player")
 @onready var camera = player.get_node("Camera2D")
+@onready var close_sfx : AudioStreamPlayer = get_node_or_null("CloseSFX")
 var puzzle_scene = preload("res://scenes/puzzle_3.tscn").instantiate()
 var interacted_with = false
 var puzzle_3_solved = false
@@ -34,6 +35,8 @@ func erase():
 func close_puzzle():
 	player.in_puzzle = false
 	puzzle_scene.visible = false
+	if close_sfx is AudioStreamPlayer:
+		close_sfx.play()
 	if level.get_node_or_null(puzzle_scene.get_path()):
 		level.remove_child(puzzle_scene)
 	camera.enabled = true

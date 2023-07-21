@@ -1,11 +1,12 @@
 extends Interactable
 
-var powered : bool = false
+var powered : bool = true
 var puzzle_1_solved : bool = false
 var current_scene : Node
 var clue_scene = preload("res://scenes/puzzle_2_clue.tscn").instantiate()
 @onready var insert_battery_sfx = $InsertBatterySFX
 @onready var remove_battery_sfx = $RemoveBatterySFX
+@onready var close_sfx : AudioStreamPlayer = get_node_or_null("CloseSFX")
 @onready var level = get_parent()
 @onready var player = level.get_node("Player")
 @onready var camera = player.get_node("Camera2D")
@@ -33,6 +34,8 @@ func open_puzzle():
 func close_puzzle():
 	player.in_puzzle = false
 	current_scene.visible = false
+	if close_sfx is AudioStreamPlayer:
+		close_sfx.play()
 	if level.get_node_or_null(current_scene.get_path()):
 		level.remove_child(current_scene)
 	camera.enabled = true

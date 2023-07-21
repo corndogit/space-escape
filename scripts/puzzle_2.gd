@@ -2,6 +2,7 @@ extends GridContainer
 
 var inputs_dict : Dictionary
 @onready var button : Button = get_node("../Submit")
+@onready var solved_sfx = get_node("SolvedSFX")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -55,6 +56,7 @@ func _check_crossword() -> bool:
 
 func _on_button_pressed():
 	if _check_crossword():
+		solved_sfx.play()
 		State.computer_wall.puzzle_2_solved = true
 		for arr in inputs_dict.values():
 			for node in arr:

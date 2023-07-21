@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://csanmktbgn121"]
+[gd_scene load_steps=42 format=3 uid="uid://csanmktbgn121"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/background/tileset_x16.png" id="1_n2fmg"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" path="res://scripts/ComputerWall.gd" id="14_su6ol"]
 [ext_resource type="Script" path="res://scripts/Crowbar.gd" id="15_2fpg3"]
 [ext_resource type="Texture2D" uid="uid://b141mm56glqel" path="res://assets/textures/items/crowbar.png" id="16_4u20u"]
+[ext_resource type="AudioStream" uid="uid://csred05ls7rwn" path="res://assets/sounds/sfx/error.wav" id="16_q2wul"]
 [ext_resource type="Script" path="res://scripts/Thruster.gd" id="17_aln6p"]
 [ext_resource type="Script" path="res://scripts/CatGPTInteractable.gd" id="17_tvea7"]
 [ext_resource type="AudioStream" uid="uid://dkilgowwpsbxl" path="res://assets/sounds/bgm/deep space flight.ogg" id="19_pacic"]
@@ -1630,6 +1631,13 @@ script = ExtResource("10_uj1kr")
 position = Vector2(-1, 4.5)
 shape = SubResource("RectangleShape2D_16a6c")
 
+[node name="OpenDoorSFX" type="AudioStreamPlayer" parent="RedDoor"]
+stream = ExtResource("9_2nd15")
+volume_db = -10.0
+
+[node name="ErrorSFX" type="AudioStreamPlayer" parent="RedDoor"]
+stream = ExtResource("16_q2wul")
+
 [node name="YellowDoor" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(956, 357)
 collision_layer = 2
@@ -1639,6 +1647,10 @@ script = ExtResource("11_pfbj8")
 position = Vector2(-1, 4.5)
 shape = SubResource("RectangleShape2D_16a6c")
 
+[node name="OpenDoorSFX" type="AudioStreamPlayer" parent="YellowDoor"]
+stream = ExtResource("9_2nd15")
+volume_db = -10.0
+
 [node name="BlueDoor" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(956, 389)
 collision_layer = 2
@@ -1647,6 +1659,10 @@ script = ExtResource("12_pk7c6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlueDoor"]
 position = Vector2(-1, 4.5)
 shape = SubResource("RectangleShape2D_16a6c")
+
+[node name="OpenDoorSFX" type="AudioStreamPlayer" parent="BlueDoor"]
+stream = ExtResource("9_2nd15")
+volume_db = -10.0
 
 [node name="Grate" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(667, 576)
@@ -1684,25 +1700,27 @@ script = ExtResource("17_tvea7")
 position = Vector2(-3, -2)
 shape = SubResource("RectangleShape2D_vr5qf")
 
-[node name="Thruster1" type="AnimatedSprite2D" parent="."]
+[node name="Thrusters" type="Node2D" parent="."]
+
+[node name="Thruster1" type="AnimatedSprite2D" parent="Thrusters"]
 position = Vector2(830, 320)
 sprite_frames = SubResource("SpriteFrames_bcbkt")
 frame_progress = 0.688711
 script = ExtResource("17_aln6p")
 
-[node name="Thruster2" type="AnimatedSprite2D" parent="."]
+[node name="Thruster2" type="AnimatedSprite2D" parent="Thrusters"]
 position = Vector2(510, 480)
 sprite_frames = SubResource("SpriteFrames_bcbkt")
 frame_progress = 0.0991642
 script = ExtResource("17_aln6p")
 
-[node name="Thruster3" type="AnimatedSprite2D" parent="."]
+[node name="Thruster3" type="AnimatedSprite2D" parent="Thrusters"]
 position = Vector2(510, 576)
 sprite_frames = SubResource("SpriteFrames_bcbkt")
 frame_progress = 0.0991642
 script = ExtResource("17_aln6p")
 
-[node name="Thruster4" type="AnimatedSprite2D" parent="."]
+[node name="Thruster4" type="AnimatedSprite2D" parent="Thrusters"]
 position = Vector2(830, 704)
 sprite_frames = SubResource("SpriteFrames_bcbkt")
 frame_progress = 0.0991642

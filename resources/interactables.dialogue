@@ -53,8 +53,9 @@ if State.computer_table.puzzle_1_solved:
 => END
 
 ~ red_door
-This is the first door leading to the main computer room. It seems like CatGPT has activated the security lockdown mode.
+This is the first door leading to the main computer room. It seems like CatGPT has triggered a security lockdown.
 if not State.computer_table.puzzle_1_solved:
+	do State.red_door.get_node("ErrorSFX").play()
 	Red door: ERROR - superuser level required. The incident will be reported.
 else:
 	Red door: Superuser level confirmed.
@@ -64,6 +65,7 @@ else:
 
 ~ blue_door
 if not State.computer_wall.puzzle_2_solved:
+	do State.red_door.get_node("ErrorSFX").play()
 	Blue door: ERROR - Instruction "Open door" not found.
 	It seems that the door's logic circuit isn't functioning.
 else:

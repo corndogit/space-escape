@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl8a116pykpvb"]
+[gd_scene load_steps=7 format=3 uid="uid://bl8a116pykpvb"]
 
 [ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_71mde"]
 [ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_7uag8"]
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="3_xitru"]
 [ext_resource type="PackedScene" path="res://scenes/maze_texture.tscn" id="4_1re8p"]
 [ext_resource type="Script" path="res://scripts/puzzle_3.gd" id="5_7daa2"]
+[ext_resource type="AudioStream" uid="uid://gte6is13mkhd" path="res://assets/sounds/sfx/closeMenu.wav" id="6_tl0q2"]
 
 [node name="puzzle_3" type="Node2D"]
 
@@ -90,6 +91,9 @@ layout_mode = 2
 tooltip_text = "Close"
 theme = ExtResource("3_xitru")
 text = "X"
+
+[node name="CloseSFX" type="AudioStreamPlayer" parent="PanelContainer"]
+stream = ExtResource("6_tl0q2")
 
 [connection signal="tree_entered" from="." to="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput" method="_on_puzzle_3_tree_entered"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput/Button" to="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput" method="_on_button_pressed"]
