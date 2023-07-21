@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://csanmktbgn121"]
+[gd_scene load_steps=36 format=3 uid="uid://csanmktbgn121"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/background/tileset_x16.png" id="1_n2fmg"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://b141mm56glqel" path="res://assets/textures/items/crowbar.png" id="16_4u20u"]
 [ext_resource type="Script" path="res://scripts/Thruster.gd" id="17_aln6p"]
 [ext_resource type="Script" path="res://scripts/CatGPTInteractable.gd" id="17_tvea7"]
+[ext_resource type="AudioStream" uid="uid://dkilgowwpsbxl" path="res://assets/sounds/bgm/deep space flight.ogg" id="19_pacic"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_t4g4p"]
 tile_data = PackedInt32Array(0, 1310720, 18, 65536, 1310720, 19, 131072, 1310720, 20, 196608, 1310720, 21, 1, 1376256, 18, 65537, 1376256, 19, 131073, 1376256, 20, 196609, 1376256, 21, 2, 1441792, 18, 65538, 1441792, 19, 131074, 1441792, 20, 196610, 1441792, 21, 3, 1507328, 18, 65539, 1507328, 19, 131075, 1507328, 20, 196611, 1507328, 21)
@@ -1685,3 +1686,8 @@ position = Vector2(830, 704)
 sprite_frames = SubResource("SpriteFrames_bcbkt")
 frame_progress = 0.0991642
 script = ExtResource("17_aln6p")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_pacic")
+volume_db = -10.978
+autoplay = true
