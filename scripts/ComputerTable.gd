@@ -4,6 +4,8 @@ var powered : bool = false
 var puzzle_1_solved : bool = false
 var current_scene : Node
 var clue_scene = preload("res://scenes/puzzle_2_clue.tscn").instantiate()
+@onready var insert_battery_sfx = $InsertBatterySFX
+@onready var remove_battery_sfx = $RemoveBatterySFX
 @onready var level = get_parent()
 @onready var player = level.get_node("Player")
 @onready var camera = player.get_node("Camera2D")

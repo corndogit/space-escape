@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://csanmktbgn121"]
+[gd_scene load_steps=41 format=3 uid="uid://csanmktbgn121"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/background/tileset_x16.png" id="1_n2fmg"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
@@ -8,10 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://r5i2stcq3yur" path="res://scenes/player.tscn" id="5_ypggi"]
 [ext_resource type="Script" path="res://scripts/BrokenPipe.gd" id="6_ch37n"]
 [ext_resource type="Script" path="res://scripts/ElectricalPanel.gd" id="8_1howk"]
+[ext_resource type="AudioStream" uid="uid://erdiwmrwhk5e" path="res://assets/sounds/sfx/chargeBattery.wav" id="8_o0vpt"]
+[ext_resource type="AudioStream" uid="uid://c1rwilvkff31n" path="res://assets/sounds/sfx/openDoor.wav" id="9_2nd15"]
 [ext_resource type="Script" path="res://scripts/ComputerTable.gd" id="9_uuee3"]
 [ext_resource type="Script" path="res://scripts/RedDoor.gd" id="10_uj1kr"]
+[ext_resource type="AudioStream" uid="uid://2n1jfn7n83sl" path="res://assets/sounds/sfx/openMenu.wav" id="11_1jgme"]
 [ext_resource type="Script" path="res://scripts/YellowDoor.gd" id="11_pfbj8"]
 [ext_resource type="Script" path="res://scripts/BlueDoor.gd" id="12_pk7c6"]
+[ext_resource type="AudioStream" uid="uid://b1ikg03pqvja" path="res://assets/sounds/sfx/insertBattery.wav" id="12_vv1pg"]
+[ext_resource type="AudioStream" uid="uid://cd82spldms4b1" path="res://assets/sounds/sfx/removeBattery.wav" id="13_4x7vc"]
 [ext_resource type="Script" path="res://scripts/Grate.gd" id="13_luiad"]
 [ext_resource type="Script" path="res://scripts/ComputerWall.gd" id="14_su6ol"]
 [ext_resource type="Script" path="res://scripts/Crowbar.gd" id="15_2fpg3"]
@@ -1583,6 +1588,9 @@ color = Color(1, 1, 0, 1)
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_o4w4q")
 
+[node name="ChargeSFX" type="AudioStreamPlayer" parent="BrokenPipe"]
+stream = ExtResource("8_o0vpt")
+
 [node name="ElectricalPanel" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(1179, 457)
 collision_layer = 2
@@ -1592,6 +1600,13 @@ script = ExtResource("8_1howk")
 position = Vector2(-0.5, -3)
 shape = SubResource("RectangleShape2D_d0mr0")
 
+[node name="InteractionSFX" type="AudioStreamPlayer" parent="ElectricalPanel"]
+stream = ExtResource("9_2nd15")
+volume_db = -10.0
+
+[node name="BatteryTakenSFX" type="AudioStreamPlayer" parent="ElectricalPanel"]
+stream = ExtResource("11_1jgme")
+
 [node name="ComputerTable" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(843, 576)
 collision_layer = 2
@@ -1599,6 +1614,12 @@ script = ExtResource("9_uuee3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerTable"]
 shape = SubResource("RectangleShape2D_pcxx3")
+
+[node name="InsertBatterySFX" type="AudioStreamPlayer" parent="ComputerTable"]
+stream = ExtResource("12_vv1pg")
+
+[node name="RemoveBatterySFX" type="AudioStreamPlayer" parent="ComputerTable"]
+stream = ExtResource("13_4x7vc")
 
 [node name="RedDoor" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(956, 420)

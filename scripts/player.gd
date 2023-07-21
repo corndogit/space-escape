@@ -68,16 +68,23 @@ func _check_for_interactable():
 	
 func _player_interact(target):
 	in_dialogue = true  # entering dialogue
+	var sound : AudioStreamPlayer = target.get_node_or_null("InteractionSFX")
+	if sound is AudioStreamPlayer:
+		sound.play()
+	else:
+		$Sounds/InteractionSFX.play()  # default interaction sound (local to Player)
 	target.interact()
 	await DialogueManager.dialogue_ended
 	in_dialogue= false
 	
 func show_player_handbook():
 	if not in_handbook:
+		$Sounds/OpenMenu.play()
 		level.add_child(handbook_scene)
 		camera.enabled = false
 		in_handbook = true
 	else:
+		$Sounds/CloseMenu.play()
 		level.remove_child(handbook_scene)
 		camera.enabled = true
 		in_handbook = false

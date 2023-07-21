@@ -1,9 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://r5i2stcq3yur"]
+[gd_scene load_steps=34 format=3 uid="uid://r5i2stcq3yur"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_cb1b4"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_b1aq0"]
 [ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="4_ln5ix"]
+[ext_resource type="AudioStream" uid="uid://2n1jfn7n83sl" path="res://assets/sounds/sfx/openMenu.wav" id="5_ol2jg"]
 [ext_resource type="PackedScene" uid="uid://d3ycex01efoyt" path="res://scenes/hud.tscn" id="6_ojwl6"]
+[ext_resource type="AudioStream" uid="uid://gte6is13mkhd" path="res://assets/sounds/sfx/closeMenu.wav" id="6_w7sab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jh47"]
 size = Vector2(22, 13)
@@ -239,3 +241,14 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("4_ln5ix")
 text = "?"
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="OpenMenu" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_ol2jg")
+
+[node name="CloseMenu" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_w7sab")
+
+[node name="InteractionSFX" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_ol2jg")

@@ -1,6 +1,7 @@
 extends Interactable
 
 @onready var tilemap : TileMap = get_parent().get_node("TileMap")
+@onready var battery_taken_sfx = $BatteryTakenSFX
 var panel_removed : bool = false
 var battery_taken : bool = false
 const PANEL_TILES = {

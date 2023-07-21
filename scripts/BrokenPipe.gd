@@ -1,6 +1,7 @@
 extends Interactable
 
 var battery_charged : bool = false
+@onready var charge_sfx = $ChargeSFX
 
 func _ready():
 	State.broken_pipe = self

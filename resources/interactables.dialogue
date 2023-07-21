@@ -3,10 +3,12 @@
 if not State.electrical_panel.panel_removed:
 	You remove the panel. There is a battery inside.
 	set State.electrical_panel.panel_removed = true
+	do State.electrical_panel.get_node("InteractionSFX").queue_free()
 
 if not State.electrical_panel.battery_taken:
 	Take the battery?
 	- Yes
+		do State.electrical_panel.battery_taken_sfx.play()
 		You took the battery.
 		set State.electrical_panel.battery_taken = true
 		do State.electrical_panel.remove_from_group("Interactable")  # todo: move this logic into the script file
@@ -21,6 +23,7 @@ There is an exposed electrical wire here.
 if State.electrical_panel.battery_taken and not State.broken_pipe.battery_charged:
 	Charge the battery?
 	- Yes
+		do State.broken_pipe.charge_sfx.play()
 		The battery is now charged.
 		set State.broken_pipe.battery_charged = true
 		do State.broken_pipe.remove_from_group("Interactable")
@@ -34,9 +37,11 @@ if not State.computer_table.powered:
 	if State.electrical_panel.battery_taken:
 		Insert the battery?
 		- Yes
+			do State.computer_table.insert_battery_sfx.play()
 			You insert the battery.
 			if not State.broken_pipe.battery_charged:
 				Computer: ERROR - External power source voltage is too low!
+				do State.computer_table.remove_battery_sfx.play()
 				You removed the battery. Maybe there is somewhere to charge it nearby?
 			else:
 				The computer turns on.
