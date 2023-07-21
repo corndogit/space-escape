@@ -24,13 +24,14 @@ func interact():
 		open_puzzle()
 
 func open_puzzle():
+	player.in_puzzle = true
 	level.add_child(current_scene)
 	State.active_puzzle = self
 	camera.enabled = false
 	current_scene.visible = true
 	
 func close_puzzle():
-	# do not forget how to do this
+	player.in_puzzle = false
 	current_scene.visible = false
 	if level.get_node_or_null(current_scene.get_path()):
 		level.remove_child(current_scene)

@@ -13,12 +13,14 @@ func interact():
 	if not State.computer_table.powered or not State.computer_table.puzzle_1_solved:
 		DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "computer_wall")
 	else:
+		player.in_puzzle = true
 		level.add_child(puzzle_scene)
 		State.active_puzzle = self
 		camera.enabled = false
 		puzzle_scene.visible = true
 
 func close_puzzle():
+	player.in_puzzle = false
 	puzzle_scene.visible = false
 	if level.get_node_or_null(puzzle_scene.get_path()):
 		level.remove_child(puzzle_scene)

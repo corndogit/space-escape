@@ -8,6 +8,7 @@ extends CharacterBody2D
 @onready var camera : Camera2D = get_node("Camera2D")
 @onready var level = get_parent()
 var handbook_scene = preload("res://scenes/handbook.tscn").instantiate()
+var in_puzzle : bool = false
 var in_dialogue : bool = false
 var in_handbook : bool = false
 
@@ -19,7 +20,7 @@ func _unhandled_input(_event):
 	if Input.is_key_pressed(KEY_E) and _check_for_interactable() and not in_dialogue:
 		_player_interact(sight.get_collider())
 	
-	elif Input.is_key_pressed(KEY_H) and not in_dialogue:
+	elif Input.is_key_pressed(KEY_H):
 		show_player_handbook()
 
 func _calculate_movement(diff : float):
@@ -86,6 +87,7 @@ func show_player_handbook():
 	else:
 		$Sounds/CloseMenu.play()
 		level.remove_child(handbook_scene)
-		camera.enabled = true
+		if not in_puzzle:
+			camera.enabled = true
 		in_handbook = false
 
