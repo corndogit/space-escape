@@ -1,11 +1,17 @@
 extends Control
 
-@onready var timer : Timer = get_node("CountdownTimer")
-@onready var timer_label : Label = get_node("HFlowContainer/Timer")
+@onready var timer : Timer = $CountdownTimer
+@onready var timer_warning : Timer = $WarningTimer
+@onready var timer_danger : Timer = $DangerTimer
+@onready var timer_label : Label = $HFlowContainer/Timer
+@onready var alert_loop : AudioStreamPlayer = $AlertLoop
 
 func _ready():
-	pass
-	#State.hud = self
+	timer_warning.wait_time = timer.wait_time * 0.8
+	timer_warning.start()
+	_on_warning_timer_timeout()
+	await get_tree().create_timer(5.0).timeout
+	_on_danger_timer_timeout()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -23,3 +29,13 @@ func format_time(time_in_seconds):
 
 func get_time_taken():
 	return format_time(timer.wait_time - timer.time_left)
+
+func _on_warning_timer_timeout():
+	timer_label.add_theme_color_override("font_color", Color(0.9, 0.9, 0.3))
+	alert_loop.play()
+	await get_tree().create_timer(3.0).timeout
+	alert_loop.stop()
+
+func _on_danger_timer_timeout():
+	timer_label.add_theme_color_override("font_color", Color(0.9, 0.3, 0.3))
+	alert_loop.play()

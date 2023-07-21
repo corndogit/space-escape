@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3ycex01efoyt"]
+[gd_scene load_steps=6 format=3 uid="uid://d3ycex01efoyt"]
 
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="1_e7lgk"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_rfioe"]
 [ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="2_wmbj7"]
 [ext_resource type="Texture2D" uid="uid://dew8yofbltyu3" path="res://assets/textures/items/help.png" id="4_en6en"]
+[ext_resource type="AudioStream" uid="uid://c3eijbjvyplg1" path="res://assets/sounds/sfx/alert.ogg" id="4_oyofp"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -35,6 +36,14 @@ wait_time = 900.0
 one_shot = true
 autostart = true
 
+[node name="WarningTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DangerTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
 [node name="Help" type="HBoxContainer" parent="."]
 modulate = Color(1, 1, 1, 0.776471)
 layout_mode = 0
@@ -59,4 +68,10 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture = ExtResource("4_en6en")
 
+[node name="AlertLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_oyofp")
+volume_db = -5.0
+
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
+[connection signal="timeout" from="WarningTimer" to="." method="_on_warning_timer_timeout"]
+[connection signal="timeout" from="DangerTimer" to="." method="_on_danger_timer_timeout"]
