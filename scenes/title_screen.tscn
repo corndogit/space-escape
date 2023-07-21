@@ -23,9 +23,6 @@ theme_override_constants/separation = 0
 layout_mode = 2
 texture = ExtResource("3_jkhtd")
 
-[node name="Midpoint" type="Control" parent="ScrollBG"]
-layout_mode = 2
-
 [node name="TextureRect2" type="TextureRect" parent="ScrollBG"]
 layout_mode = 2
 texture = ExtResource("3_jkhtd")
