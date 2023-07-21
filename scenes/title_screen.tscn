@@ -58,6 +58,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("2_nlyas")
 theme_override_font_sizes/font_size = 20
-text = "v0.1-alpha"
+text = "v0.2-alpha"
 
 [connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]
