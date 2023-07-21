@@ -99,8 +99,8 @@ if not State.computer_wall.puzzle_2_solved:
 if State.crowbar.taken:
 	Use the crowbar?
 	- Yes
-		You pry the grate open and pick up the small object inside.
-		The object is a USB stick labelled "YellOS Boot Device". 
+		do State.grate.open_sfx.play()
+		You pry the grate open and pick up the small object inside. The object is a USB stick labelled "YellOS Boot Device". 
 		do State.grate.take_usb()
 	- No => END 
 else:

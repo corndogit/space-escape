@@ -28,6 +28,7 @@ func interact():
 	puzzle_scene.visible = true
 	
 func erase():
+	$OpenDoorSFX.play()
 	for tile in DOOR_TILES.values():
 		tilemap.erase_cell(1, tile)
 	self.remove_from_group("Interactable")

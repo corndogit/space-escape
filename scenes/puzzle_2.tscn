@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxeab6jlta8r8"]
+[gd_scene load_steps=7 format=3 uid="uid://cxeab6jlta8r8"]
 
 [ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_dn85q"]
 [ext_resource type="FontFile" uid="uid://bsgaosfxlitmu" path="res://assets/fonts/dotmatrix.TTF" id="1_pp8s8"]
 [ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_lu3sm"]
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="3_sv4kp"]
 [ext_resource type="Script" path="res://scripts/puzzle_2.gd" id="4_2t77g"]
-[ext_resource type="AudioStream" uid="uid://gte6is13mkhd" path="res://assets/sounds/sfx/closeMenu.wav" id="6_4nos8"]
 [ext_resource type="AudioStream" uid="uid://ov0d8u6r0dvv" path="res://assets/sounds/sfx/puzzleComplete.wav" id="6_yfgq7"]
 
 [node name="puzzle_2" type="Node2D"]
@@ -401,9 +400,6 @@ stream = ExtResource("6_yfgq7")
 layout_mode = 2
 theme = ExtResource("3_sv4kp")
 text = "Submit"
-
-[node name="CloseSFX" type="AudioStreamPlayer" parent="PanelContainer"]
-stream = ExtResource("6_4nos8")
 
 [connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Submit" to="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" method="_on_button_pressed"]

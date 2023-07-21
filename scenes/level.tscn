@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://csanmktbgn121"]
+[gd_scene load_steps=43 format=3 uid="uid://csanmktbgn121"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/background/tileset_x16.png" id="1_n2fmg"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" path="res://scripts/Grate.gd" id="13_luiad"]
 [ext_resource type="Script" path="res://scripts/ComputerWall.gd" id="14_su6ol"]
 [ext_resource type="Script" path="res://scripts/Crowbar.gd" id="15_2fpg3"]
+[ext_resource type="AudioStream" uid="uid://gte6is13mkhd" path="res://assets/sounds/sfx/closeMenu.wav" id="15_n6mp4"]
 [ext_resource type="Texture2D" uid="uid://b141mm56glqel" path="res://assets/textures/items/crowbar.png" id="16_4u20u"]
 [ext_resource type="AudioStream" uid="uid://csred05ls7rwn" path="res://assets/sounds/sfx/error.wav" id="16_q2wul"]
 [ext_resource type="Script" path="res://scripts/Thruster.gd" id="17_aln6p"]
@@ -1591,6 +1592,7 @@ shape = SubResource("RectangleShape2D_o4w4q")
 
 [node name="ChargeSFX" type="AudioStreamPlayer" parent="BrokenPipe"]
 stream = ExtResource("8_o0vpt")
+volume_db = -10.0
 
 [node name="ElectricalPanel" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(1179, 457)
@@ -1622,6 +1624,9 @@ stream = ExtResource("12_vv1pg")
 [node name="RemoveBatterySFX" type="AudioStreamPlayer" parent="ComputerTable"]
 stream = ExtResource("13_4x7vc")
 
+[node name="CloseSFX" type="AudioStreamPlayer" parent="ComputerTable"]
+stream = ExtResource("15_n6mp4")
+
 [node name="RedDoor" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(956, 420)
 collision_layer = 2
@@ -1651,6 +1656,9 @@ shape = SubResource("RectangleShape2D_16a6c")
 stream = ExtResource("9_2nd15")
 volume_db = -10.0
 
+[node name="CloseSFX" type="AudioStreamPlayer" parent="YellowDoor"]
+stream = ExtResource("15_n6mp4")
+
 [node name="BlueDoor" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(956, 389)
 collision_layer = 2
@@ -1672,6 +1680,10 @@ script = ExtResource("13_luiad")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grate"]
 shape = SubResource("CircleShape2D_ihwy6")
 
+[node name="OpenGrateSFX" type="AudioStreamPlayer" parent="Grate"]
+stream = ExtResource("9_2nd15")
+volume_db = -10.0
+
 [node name="ComputerWall" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(699, 426)
 collision_layer = 2
@@ -1679,6 +1691,9 @@ script = ExtResource("14_su6ol")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerWall"]
 shape = SubResource("RectangleShape2D_ki0it")
+
+[node name="CloseSFX" type="AudioStreamPlayer" parent="ComputerWall"]
+stream = ExtResource("15_n6mp4")
 
 [node name="Crowbar" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(955, 734)

@@ -16,6 +16,7 @@ func interact():
 	DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "blue_door")
 
 func erase():
+	$OpenDoorSFX.play()
 	for tile in DOOR_TILES.values():
 		tilemap.erase_cell(1, tile)
 	get_node(".").remove_from_group("Interactable")

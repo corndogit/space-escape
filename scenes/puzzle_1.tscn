@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpbitbapkrcp"]
+[gd_scene load_steps=6 format=3 uid="uid://dpbitbapkrcp"]
 
 [ext_resource type="Script" path="res://scripts/puzzle_1.gd" id="1_8f3ge"]
 [ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="1_dr408"]
 [ext_resource type="Script" path="res://scripts/PanelUI.gd" id="2_6xl1c"]
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="2_o4b6n"]
 [ext_resource type="AudioStream" uid="uid://ov0d8u6r0dvv" path="res://assets/sounds/sfx/puzzleComplete.wav" id="5_v3s2s"]
-[ext_resource type="AudioStream" uid="uid://gte6is13mkhd" path="res://assets/sounds/sfx/closeMenu.wav" id="6_f5b2d"]
 
 [node name="puzzle_1" type="Node2D"]
 
@@ -158,9 +157,6 @@ vertical_alignment = 1
 
 [node name="SolvedSFX" type="AudioStreamPlayer" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1"]
 stream = ExtResource("5_v3s2s")
-
-[node name="CloseSFX" type="AudioStreamPlayer" parent="PanelContainer"]
-stream = ExtResource("6_f5b2d")
 
 [connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]
 [connection signal="text_changed" from="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1/Control/solutions/Answer1" to="PanelContainer/HBoxContainer/VBoxContainer/Puzzle1" method="_on_answer_text_changed"]

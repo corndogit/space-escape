@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0wsjft2wn83j"]
+[gd_scene load_steps=5 format=3 uid="uid://c0wsjft2wn83j"]
 
 [ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="1_ka3vh"]
 [ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_oir3m"]
 [ext_resource type="StyleBox" uid="uid://vsm1xquqv05b" path="res://resources/panel_bg.tres" id="2_5hprm"]
+[ext_resource type="AudioStream" uid="uid://crmt6obpymoo4" path="res://assets/sounds/bgm/ObservingTheStar.ogg" id="4_eq24g"]
 
 [node name="win_screen" type="Node2D"]
 script = ExtResource("1_oir3m")
@@ -46,5 +47,9 @@ alignment = 1
 custom_minimum_size = Vector2(130, 0)
 layout_mode = 2
 text = "Exit"
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_eq24g")
+autoplay = true
 
 [connection signal="pressed" from="Control/PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]

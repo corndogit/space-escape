@@ -1,6 +1,7 @@
 extends Interactable
 
 var usb_taken : bool = false
+@onready var open_sfx = $OpenGrateSFX
 
 func _ready():
 	State.grate = self
