@@ -8,7 +8,9 @@ extends Control
 
 func _ready():
 	timer_warning.wait_time = timer.wait_time * 0.8
+	timer_danger.wait_time = timer.wait_time - 60.0
 	timer_warning.start()
+	timer_danger.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
