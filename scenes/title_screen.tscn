@@ -46,12 +46,9 @@ text = "Space Escape:
 AI Lockdown"
 horizontal_alignment = 1
 
-[node name="HowToPlay" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer"]
+[node name="Introduction" type="Button" parent="PanelContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Play"
-
-[node name="Sound" type="AudioStreamPlayer" parent="PanelContainer/CenterContainer/VBoxContainer/HowToPlay"]
-stream = ExtResource("4_mtpje")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
@@ -60,4 +57,7 @@ theme = ExtResource("2_nlyas")
 theme_override_font_sizes/font_size = 20
 text = "v0.2.3-alpha"
 
-[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]
+[node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mtpje")
+
+[connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/Introduction" to="." method="_on_introduction_pressed"]

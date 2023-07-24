@@ -4,7 +4,7 @@ extends Node2D
 @onready var bg = get_node("ScrollBG")
 @onready var bg_start = bg.position
 @onready var bgm = get_node_or_null("BGM")
-@onready var button_sfx = get_node_or_null("PanelContainer/CenterContainer/VBoxContainer/HowToPlay/Sound")
+@onready var button_sfx = get_node_or_null("ButtonSFX")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,5 +24,11 @@ func _process(delta):
 	bg.position.x -= scroll_speed * delta
 
 func _on_how_to_play_pressed():
-	button_sfx.play()
+	if button_sfx:
+		button_sfx.play()
 	add_child(load("res://scenes/how_to_play.tscn").instantiate())
+
+
+func _on_introduction_pressed():
+	button_sfx.play()
+	add_child(load("res://scenes/introduction.tscn").instantiate())
