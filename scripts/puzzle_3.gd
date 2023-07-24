@@ -15,6 +15,7 @@ func _on_button_pressed():
 
 
 func _on_puzzle_3_tree_entered():
+	await ready
 	if State.grate.usb_taken:
 		texture.visible = true
 		error.visible = false
