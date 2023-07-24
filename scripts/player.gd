@@ -79,7 +79,7 @@ func _player_interact(target):
 	in_dialogue= false
 	
 func show_player_handbook():
-	if not in_handbook:
+	if not handbook_scene.is_inside_tree():
 		$Sounds/OpenMenu.play()
 		level.add_child(handbook_scene)
 		camera.enabled = false
@@ -90,4 +90,3 @@ func show_player_handbook():
 		if not in_puzzle:
 			camera.enabled = true
 		in_handbook = false
-
