@@ -1620,9 +1620,11 @@ shape = SubResource("RectangleShape2D_pcxx3")
 
 [node name="InsertBatterySFX" type="AudioStreamPlayer" parent="ComputerTable"]
 stream = ExtResource("12_vv1pg")
+volume_db = -6.0
 
 [node name="RemoveBatterySFX" type="AudioStreamPlayer" parent="ComputerTable"]
 stream = ExtResource("13_4x7vc")
+volume_db = -6.0
 
 [node name="CloseSFX" type="AudioStreamPlayer" parent="ComputerTable"]
 stream = ExtResource("15_n6mp4")
@@ -1642,6 +1644,7 @@ volume_db = -10.0
 
 [node name="ErrorSFX" type="AudioStreamPlayer" parent="RedDoor"]
 stream = ExtResource("16_q2wul")
+volume_db = -7.0
 
 [node name="YellowDoor" type="StaticBody2D" parent="." groups=["Interactable"]]
 position = Vector2(956, 357)
