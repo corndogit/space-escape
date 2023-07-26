@@ -55,7 +55,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("2_nlyas")
 theme_override_font_sizes/font_size = 20
-text = "v0.2.3-alpha"
+text = "v0.3.0-alpha"
 
 [node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mtpje")
