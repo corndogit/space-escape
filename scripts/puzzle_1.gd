@@ -13,7 +13,6 @@ func _ready():
 		if node.get_class() == "LineEdit":
 			input_fields.append(node)
 
-
 func _on_answer_text_changed(_new_text):
 	# loop through the input fields and construct the result
 	var temp_result : String = ''
@@ -24,7 +23,6 @@ func _on_answer_text_changed(_new_text):
 			temp_result += '0'
 	result.text = temp_result
 	_check_result()
-
 
 func _check_result():
 	if result.text == CORRECT_ANSWER and not puzzle_solved:

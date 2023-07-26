@@ -53,7 +53,6 @@ func _check_crossword() -> bool:
 			return false
 	return true
 
-
 func _on_button_pressed():
 	if _check_crossword():
 		solved_sfx.play()

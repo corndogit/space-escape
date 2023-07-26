@@ -99,6 +99,5 @@ text = "X"
 [node name="CloseSFX" type="AudioStreamPlayer" parent="PanelContainer"]
 stream = ExtResource("6_tl0q2")
 
-[connection signal="tree_entered" from="." to="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput" method="_on_puzzle_3_tree_entered"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput/Button" to="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput" method="_on_button_pressed"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/CloseButtonContainer/VBoxContainer/CloseButton" to="PanelContainer" method="_on_close_button_pressed"]
