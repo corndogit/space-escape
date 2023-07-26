@@ -85,9 +85,13 @@ if State.yellow_door.puzzle_3_solved:
 => END
 
 ~ crowbar
-do State.crowbar.sprite.queue_free()
-You picked up the crowbar.
-do State.crowbar.pickup()
+It's a crowbar.
+Take the crowbar?
+- Yes
+	do State.crowbar.sprite.queue_free()
+	You picked up the crowbar.
+	do State.crowbar.pickup()
+- No => END
 => END
 
 ~ grate
