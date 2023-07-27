@@ -24,8 +24,6 @@ State="*res://scripts/autoload/state.gd"
 [editor]
 
 movie_writer/movie_file="res://_exports/output.avi"
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
 
 [editor_plugins]
 
