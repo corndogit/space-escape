@@ -1718,6 +1718,9 @@ script = ExtResource("17_tvea7")
 position = Vector2(-3, -2)
 shape = SubResource("RectangleShape2D_vr5qf")
 
+[node name="InteractionSFX" type="AudioStreamPlayer" parent="CatGPT"]
+volume_db = -10.0
+
 [node name="Thrusters" type="Node2D" parent="."]
 
 [node name="Thruster1" type="AnimatedSprite2D" parent="Thrusters"]
