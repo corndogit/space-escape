@@ -1,0 +1,20 @@
+~ start
+
+You reach the ship's main computer. CatGPT appears on the screen!
+CatGPT: Nya-ha-ha! Now I have total control of the ship - prepare to be ejected into space, human!
+
+=> END
+
+~ type_command
+
+Fortunately the keyboard still works, and you enter a command.
+CatGPT: Wait, no! Don't type that command! My plan will be ruined!
+
+=> END
+
+~ enter_command
+
+You press enter. CatGPT is stopped and deleted from all of the computer's systems.
+You breathe a sign of relief, knowing that you and the crew of the USS Galactica can safely continue to explore the stars.
+
+=> END

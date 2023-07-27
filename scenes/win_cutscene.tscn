@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://0ta8kufidh72"]
+
+[ext_resource type="Script" path="res://scripts/win_cutscene.gd" id="1_btqqn"]
+[ext_resource type="Texture2D" uid="uid://i176mafmr2tw" path="res://assets/textures/background/crt_bg.png" id="2_7hb80"]
+[ext_resource type="Texture2D" uid="uid://bt34d2iepyqvj" path="res://assets/textures/CatGPT/mischievous.png" id="2_i74g7"]
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="4_32gk2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_786tu"]
+texture = ExtResource("2_7hb80")
+
+[node name="win_cutscene" type="Node2D"]
+script = ExtResource("1_btqqn")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_786tu")
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 647.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel/CenterContainer"]
+layout_mode = 2
+
+[node name="CatGPT" type="TextureRect" parent="Panel/CenterContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+texture = ExtResource("2_i74g7")
+expand_mode = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Panel/CenterContainer"]
+position = Vector2(577, 293)
+emitting = false
+amount = 20
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.48
+randomness = 0.31
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 166.62
+initial_velocity_max = 489.85
+scale_amount_min = 2.0
+scale_amount_max = 8.0
+
+[node name="Command" type="Label" parent="."]
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 448.0
+offset_bottom = 64.0
+theme = ExtResource("4_32gk2")
