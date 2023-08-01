@@ -21,6 +21,10 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://scripts/autoload/state.gd"
 
+[display]
+
+window/size/resizable=false
+
 [editor]
 
 movie_writer/movie_file="res://_exports/output.avi"
