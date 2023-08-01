@@ -65,9 +65,8 @@ bbcode_enabled = true
 text = "Following the Solar System's accession into the Galactic Federation, we have adopted new navigational standards which are denoted in this guide.
 
 [font_size=28]Numbers:[/font_size]
-[ul]
-0 - 9 represent 0-9 (as usual)
-A, B, C, D, E and F represent 10, 11, 12, 13, 14 and 15[/ul]"
+- 0 - 9 represent 0-9 (as usual)
+- A, B, C, D, E and F represent 10, 11, 12, 13, 14 and 15"
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
@@ -81,12 +80,11 @@ theme_override_constants/shadow_outline_size = 4
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[font_size=28]Arithmetic:[/font_size]
-[ul]
-[font=res://assets/fonts/glipervelz.ttf][font_size=40]A[/font_size][/font] = add together, then halve the result
-[font=res://assets/fonts/glipervelz.ttf][font_size=40]B[/font_size][/font] = subtract right from left, then flip the +/- sign
-[font=res://assets/fonts/glipervelz.ttf][font_size=40]C[/font_size][/font] = multiply together, divide by 10 and round up
-[font=res://assets/fonts/glipervelz.ttf][font_size=40]D[/font_size][/font] = add together, add 1 and divide by 5
-[/ul]
+- [font=res://assets/fonts/glipervelz.ttf][font_size=40]A[/font_size][/font] = add together, then halve the result
+- [font=res://assets/fonts/glipervelz.ttf][font_size=40]B[/font_size][/font] = subtract right from left, then flip the +/- sign
+- [font=res://assets/fonts/glipervelz.ttf][font_size=40]C[/font_size][/font] = multiply together, divide by 10 and round up
+- [font=res://assets/fonts/glipervelz.ttf][font_size=40]D[/font_size][/font] = add together, add 1 and divide by 5
+
 
 [font_size=18]Press H to open or close this guide.[/font_size]"
 fit_content = true
