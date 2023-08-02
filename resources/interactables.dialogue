@@ -47,9 +47,11 @@ if not State.computer_table.powered:
 				The computer turns on.
 				set State.computer_table.powered = true
 		- No => END
-if State.computer_table.puzzle_1_solved:
-	Computer: Welcome, superuser, now displaying the latest captain's log...
-	You can now interact with the table again to view the captain's log.
+=> END
+
+~ puzzle_1_solved
+Computer: Welcome, superuser, now displaying the latest captain's log...
+You can now interact with the table again to view the captain's log.
 => END
 
 ~ red_door

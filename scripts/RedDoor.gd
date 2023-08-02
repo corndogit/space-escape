@@ -8,12 +8,13 @@ const DOOR_TILES = {
 	"top_right": Vector2(17, 0),
 	"bottom_right": Vector2(17, 1)
 }
+const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 
 func _ready():
 	State.red_door = self
 
 func interact():
-	DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "red_door")
+	CustomDialogue.start(DIALOGUE_TYPE, "red_door")
 
 func erase():
 	$OpenDoorSFX.play()

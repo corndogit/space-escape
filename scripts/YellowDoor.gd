@@ -14,13 +14,14 @@ const DOOR_TILES = {
 	"top_right": Vector2(17, -4),
 	"bottom_right": Vector2(17, -3)
 }
+const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 
 func _ready():
 	State.yellow_door = self
 
 func interact():
 	if not interacted_with:
-		DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "yellow_door")
+		CustomDialogue.start(DIALOGUE_TYPE, "yellow_door")
 	player.in_puzzle = true
 	level.add_child(puzzle_scene)
 	State.active_puzzle = self

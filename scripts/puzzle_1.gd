@@ -5,6 +5,7 @@ extends Control
 @onready var title : Label = get_node("Title")
 @onready var solved_sfx = get_node("SolvedSFX")
 const CORRECT_ANSWER : String = "7365"
+const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 var input_fields : Array = []
 var puzzle_solved = false
 
@@ -33,5 +34,6 @@ func _check_result():
 		for field in input_fields:
 			field.editable = false
 		await get_tree().create_timer(1.0).timeout
+		CustomDialogue.start(DIALOGUE_TYPE, "puzzle_1_solved")
+		await DialogueManager.dialogue_ended
 		State.computer_table.puzzle_1_solved = true
-		DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "computer_table")

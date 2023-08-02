@@ -1,13 +1,14 @@
 extends Interactable
 
 var taken : bool = false
+const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 @onready var sprite : Sprite2D = get_node("Sprite2D")
 
 func _ready():
 	State.crowbar = self
 
 func interact():
-	DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "crowbar")
+	CustomDialogue.start(DIALOGUE_TYPE, "crowbar")
 
 func pickup():
 	taken = true

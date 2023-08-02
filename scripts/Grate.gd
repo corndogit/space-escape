@@ -2,12 +2,13 @@ extends Interactable
 
 var usb_taken : bool = false
 @onready var open_sfx = $OpenGrateSFX
+const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 
 func _ready():
 	State.grate = self
 
 func interact():
-	DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "grate")
+	CustomDialogue.start(DIALOGUE_TYPE, "grate")
 	
 func take_usb():
 	usb_taken = true
