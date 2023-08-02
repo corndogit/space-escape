@@ -37,4 +37,3 @@ func _check_result():
 		CustomDialogue.start(DIALOGUE_TYPE, "puzzle_1_solved")
 		await DialogueManager.dialogue_ended
 		State.computer_table.puzzle_1_solved = true
-		queue_free()

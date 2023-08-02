@@ -17,7 +17,7 @@ func _process(delta):
 	_check_for_interactable()
 	
 func _unhandled_input(_event):
-	if Input.is_key_pressed(KEY_E) and _check_for_interactable() and not in_dialogue:
+	if Input.is_key_pressed(KEY_E) and _check_for_interactable() and not in_dialogue and not in_puzzle:
 		_player_interact(sight.get_collider())
 	
 	elif Input.is_key_pressed(KEY_H):
