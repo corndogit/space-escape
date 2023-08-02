@@ -3,6 +3,7 @@ extends GridContainer
 var inputs_dict : Dictionary
 @onready var button : Button = get_node("../Submit")
 @onready var solved_sfx = get_node("SolvedSFX")
+const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -60,4 +61,4 @@ func _on_button_pressed():
 		for arr in inputs_dict.values():
 			for node in arr:
 				node.editable = false
-		DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "computer_wall")
+		CustomDialogue.start(DIALOGUE_TYPE, "computer_wall")

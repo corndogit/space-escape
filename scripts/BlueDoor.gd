@@ -1,6 +1,7 @@
 extends Interactable
 
 @onready var tilemap : TileMap = get_parent().get_node("TileMap")
+const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 const DOOR_TILES = {
 	"top_left": Vector2(16, -2),
 	"bottom_left": Vector2(16, -1),
@@ -13,7 +14,7 @@ func _ready():
 	State.blue_door = self
 
 func interact():
-	DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "blue_door")
+	CustomDialogue.start(DIALOGUE_TYPE, "blue_door")
 
 func erase():
 	$OpenDoorSFX.play()

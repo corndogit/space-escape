@@ -10,6 +10,7 @@ const PANEL_TILES = {
 	"top_right": Vector2(31, 2),
 	"bottom_right": Vector2(31, 3)
 }
+const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 
 func _ready():
 	State.electrical_panel = self
@@ -18,4 +19,4 @@ func interact():
 	if not panel_removed:
 		for tile in PANEL_TILES.values():
 			tilemap.erase_cell(1, tile)
-	DialogueManager.show_example_dialogue_balloon(load("res://resources/interactables.dialogue"), "electrical_panel")
+	CustomDialogue.start(DIALOGUE_TYPE, "electrical_panel")
