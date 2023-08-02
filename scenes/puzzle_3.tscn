@@ -65,6 +65,7 @@ offset_top = -1.0
 offset_right = 303.0
 offset_bottom = 57.0
 theme = ExtResource("3_xitru")
+context_menu_enabled = false
 
 [node name="Button" type="Button" parent="PanelContainer/HBoxContainer/PuzzleVBoxContainer/PuzzleInput"]
 layout_mode = 0

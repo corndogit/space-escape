@@ -77,6 +77,7 @@ theme_override_font_sizes/font_size = 54
 text = "t"
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_0-1" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -87,6 +88,7 @@ theme_override_font_sizes/font_size = 54
 text = "i"
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_0-2" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -97,6 +99,7 @@ theme_override_font_sizes/font_size = 54
 text = "e"
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_0-3" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -107,6 +110,7 @@ theme_override_font_sizes/font_size = 54
 text = "r"
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="empty" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword"]
 custom_minimum_size = Vector2(64, 64)
@@ -152,6 +156,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="empty10" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword"]
 custom_minimum_size = Vector2(64, 64)
@@ -173,6 +178,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="empty12" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword"]
 custom_minimum_size = Vector2(64, 64)
@@ -202,6 +208,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_2-4" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -211,6 +218,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_2-5" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -220,6 +228,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_2-6" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -229,6 +238,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_2-7" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -238,6 +248,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_2-8" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -247,6 +258,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_2-9" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -256,6 +268,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="empty17" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword"]
 custom_minimum_size = Vector2(64, 64)
@@ -277,6 +290,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="empty21" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword"]
 custom_minimum_size = Vector2(64, 64)
@@ -298,6 +312,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="empty24" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword"]
 custom_minimum_size = Vector2(64, 64)
@@ -315,6 +330,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_4-1" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -324,6 +340,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_4-2" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -333,6 +350,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_4-3" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -342,6 +360,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="input_4-4" type="LineEdit" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword" groups=["crossword"]]
 custom_minimum_size = Vector2(64, 64)
@@ -351,6 +370,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="empty26" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword"]
 custom_minimum_size = Vector2(64, 64)
@@ -392,6 +412,7 @@ theme_override_fonts/font = ExtResource("1_pp8s8")
 theme_override_font_sizes/font_size = 54
 alignment = 1
 max_length = 1
+context_menu_enabled = false
 
 [node name="SolvedSFX" type="AudioStreamPlayer" parent="PanelContainer/HBoxContainer/VBoxContainer/Puzzle2/FlowContainer/Crossword"]
 stream = ExtResource("6_yfgq7")
