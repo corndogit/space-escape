@@ -27,7 +27,7 @@ func _ready():
 	CustomDialogue.start(DIALOGUE_TYPE, "enter_command")
 	await DialogueManager.dialogue_ended
 	
-	get_tree().change_scene_to_file("res://scenes/win_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/win_screen.tscn")
 
 func _type_command():
 	for c in COMMAND_STRING:

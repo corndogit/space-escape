@@ -1,112 +1,112 @@
 [gd_scene load_steps=34 format=3 uid="uid://bj0ryq6rypupy"]
 
-[ext_resource type="Script" path="res://scripts/title.gd" id="1_xhvad"]
-[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="2_wbcts"]
-[ext_resource type="Texture2D" uid="uid://b8ukh6sdpnnhy" path="res://assets/textures/background/bg.png" id="3_qyhbf"]
-[ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="4_8car7"]
-[ext_resource type="Texture2D" uid="uid://dkt57fe845ypv" path="res://assets/textures/ui/WASD.png" id="4_olnq8"]
-[ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="5_4al5w"]
+[ext_resource type="Script" path="res://scripts/title.gd" id="1_81p8x"]
+[ext_resource type="Texture2D" uid="uid://b8ukh6sdpnnhy" path="res://assets/textures/background/bg.png" id="2_5mmaa"]
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="3_deye6"]
+[ext_resource type="Texture2D" uid="uid://dkt57fe845ypv" path="res://assets/textures/ui/WASD.png" id="4_t5icg"]
+[ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="5_75cry"]
+[ext_resource type="FontFile" uid="uid://cvqh6bdrrj53t" path="res://assets/fonts/retro_gaming.ttf" id="6_h0n8k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q11ix"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e7agw"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uhof7"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4p8hr"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r01p3"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8rgx"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rh4qv"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m8mnx"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(32, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_konu0"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gc2tg"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(64, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g7ip7"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(80, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ux0yy"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(96, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2lej"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0qopo"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_db0n3"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_77xsn"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvbiy"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(64, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mkay5"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(80, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_soda4"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(96, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dldfk"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(112, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1512"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(128, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fx2at"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(144, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fna13"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(160, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0sn31"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(176, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j88cp"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(192, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5qow"]
-atlas = ExtResource("4_8car7")
+atlas = ExtResource("5_75cry")
 region = Rect2(208, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_30c8x"]
@@ -203,7 +203,7 @@ animations = [{
 }]
 
 [node name="how_to_play" type="Node2D"]
-script = ExtResource("1_xhvad")
+script = ExtResource("1_81p8x")
 
 [node name="ScrollBG" type="HBoxContainer" parent="."]
 offset_right = 3840.0
@@ -212,19 +212,19 @@ theme_override_constants/separation = 0
 
 [node name="TextureRect" type="TextureRect" parent="ScrollBG"]
 layout_mode = 2
-texture = ExtResource("3_qyhbf")
+texture = ExtResource("2_5mmaa")
 
 [node name="Midpoint" type="Control" parent="ScrollBG"]
 layout_mode = 2
 
 [node name="TextureRect2" type="TextureRect" parent="ScrollBG"]
 layout_mode = 2
-texture = ExtResource("3_qyhbf")
+texture = ExtResource("2_5mmaa")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_right = 1152.0
 offset_bottom = 646.0
-theme = ExtResource("2_wbcts")
+theme = ExtResource("3_deye6")
 theme_override_styles/panel = SubResource("StyleBoxEmpty_q11ix")
 
 [node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
@@ -258,7 +258,7 @@ layout_mode = 2
 
 [node name="WASD" type="TextureRect" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Controls/AspectRatioContainer"]
 layout_mode = 2
-texture = ExtResource("4_olnq8")
+texture = ExtResource("4_t5icg")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Controls"]
 custom_minimum_size = Vector2(350, 0)
@@ -302,7 +302,7 @@ offset_right = 51.0
 offset_bottom = 5.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("5_4al5w")
+theme_override_fonts/font = ExtResource("6_h0n8k")
 text = "?"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/CenterContainer/VBoxContainer/HBoxContainer/Interaction"]

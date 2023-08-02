@@ -19,7 +19,7 @@ func _process(_delta):
 
 func _on_countdown_timer_timeout():
 	timer_label.visible = false
-	get_tree().change_scene_to_file("res://scenes/lose_scene.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/lose_scene.tscn")
 
 func format_time(time_in_seconds):
 	var mins = int(time_in_seconds / 60) 

@@ -26,9 +26,9 @@ func _process(delta):
 func _on_how_to_play_pressed():
 	if button_sfx:
 		button_sfx.play()
-	add_child(load("res://scenes/how_to_play.tscn").instantiate())
+	add_child(load("res://scenes/ui/how_to_play.tscn").instantiate())
 
 
 func _on_introduction_pressed():
 	button_sfx.play()
-	add_child(load("res://scenes/introduction.tscn").instantiate())
+	add_child(load("res://scenes/ui/introduction.tscn").instantiate())

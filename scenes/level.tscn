@@ -1,11 +1,11 @@
-[gd_scene load_steps=43 format=3 uid="uid://csanmktbgn121"]
+[gd_scene load_steps=43 format=3 uid="uid://bkohol7ig47jn"]
 
 [ext_resource type="Texture2D" uid="uid://dpjwavqreb3ng" path="res://assets/textures/background/tileset_x16.png" id="1_n2fmg"]
 [ext_resource type="Texture2D" uid="uid://8leiqbwdukse" path="res://assets/textures/player/Astronaut-Sheet.png" id="2_jwo8g"]
 [ext_resource type="Texture2D" uid="uid://b8ukh6sdpnnhy" path="res://assets/textures/background/bg.png" id="2_tvfgn"]
 [ext_resource type="Texture2D" uid="uid://6gjrpgwoabjh" path="res://assets/textures/background/bg_animate0.png" id="3_1puyj"]
 [ext_resource type="Script" path="res://scripts/BgAnimate.gd" id="4_hx4oo"]
-[ext_resource type="PackedScene" uid="uid://r5i2stcq3yur" path="res://scenes/player.tscn" id="5_ypggi"]
+[ext_resource type="PackedScene" uid="uid://dty0nm5puu1c" path="res://scenes/player/player.tscn" id="5_ypggi"]
 [ext_resource type="Script" path="res://scripts/BrokenPipe.gd" id="6_ch37n"]
 [ext_resource type="Script" path="res://scripts/ElectricalPanel.gd" id="8_1howk"]
 [ext_resource type="AudioStream" uid="uid://erdiwmrwhk5e" path="res://assets/sounds/sfx/chargeBattery.wav" id="8_o0vpt"]

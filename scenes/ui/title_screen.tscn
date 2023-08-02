@@ -1,18 +1,18 @@
 [gd_scene load_steps=7 format=3 uid="uid://ffyof8wge6rn"]
 
-[ext_resource type="Script" path="res://scripts/title.gd" id="1_lnxqj"]
-[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="2_nlyas"]
-[ext_resource type="Texture2D" uid="uid://b8ukh6sdpnnhy" path="res://assets/textures/background/bg.png" id="3_jkhtd"]
-[ext_resource type="AudioStream" uid="uid://2n1jfn7n83sl" path="res://assets/sounds/sfx/openMenu.wav" id="4_mtpje"]
-[ext_resource type="AudioStream" uid="uid://crmt6obpymoo4" path="res://assets/sounds/bgm/ObservingTheStar.ogg" id="5_melxn"]
+[ext_resource type="Script" path="res://scripts/title.gd" id="1_sepf2"]
+[ext_resource type="AudioStream" uid="uid://crmt6obpymoo4" path="res://assets/sounds/bgm/ObservingTheStar.ogg" id="2_hsur4"]
+[ext_resource type="Texture2D" uid="uid://b8ukh6sdpnnhy" path="res://assets/textures/background/bg.png" id="3_e2eku"]
+[ext_resource type="Theme" uid="uid://cujec1iqo8wh0" path="res://resources/main_theme.tres" id="4_wlt5i"]
+[ext_resource type="AudioStream" uid="uid://2n1jfn7n83sl" path="res://assets/sounds/sfx/openMenu.wav" id="5_1i4a1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tgk2g"]
 
 [node name="title_screen" type="Node2D"]
-script = ExtResource("1_lnxqj")
+script = ExtResource("1_sepf2")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_melxn")
+stream = ExtResource("2_hsur4")
 
 [node name="ScrollBG" type="HBoxContainer" parent="."]
 offset_right = 3840.0
@@ -21,16 +21,16 @@ theme_override_constants/separation = 0
 
 [node name="TextureRect" type="TextureRect" parent="ScrollBG"]
 layout_mode = 2
-texture = ExtResource("3_jkhtd")
+texture = ExtResource("3_e2eku")
 
 [node name="TextureRect2" type="TextureRect" parent="ScrollBG"]
 layout_mode = 2
-texture = ExtResource("3_jkhtd")
+texture = ExtResource("3_e2eku")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_right = 1152.0
 offset_bottom = 646.0
-theme = ExtResource("2_nlyas")
+theme = ExtResource("4_wlt5i")
 theme_override_styles/panel = SubResource("StyleBoxEmpty_tgk2g")
 
 [node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
@@ -53,11 +53,11 @@ text = "Play"
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
-theme = ExtResource("2_nlyas")
+theme = ExtResource("4_wlt5i")
 theme_override_font_sizes/font_size = 20
-text = "v0.4.1.1-beta"
+text = "v0.5-beta"
 
 [node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_mtpje")
+stream = ExtResource("5_1i4a1")
 
 [connection signal="pressed" from="PanelContainer/CenterContainer/VBoxContainer/Introduction" to="." method="_on_introduction_pressed"]

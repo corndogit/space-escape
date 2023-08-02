@@ -18,4 +18,4 @@ func _on_retry_pressed():
 
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/title_screen.tscn")

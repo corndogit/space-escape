@@ -7,7 +7,8 @@ extends CharacterBody2D
 @onready var indicator : Label = get_node("Indicator")
 @onready var camera : Camera2D = get_node("Camera2D")
 @onready var level = get_parent()
-var handbook_scene = preload("res://scenes/handbook.tscn").instantiate()
+var handbook_scene_path
+var handbook_scene = preload("res://scenes/ui/handbook.tscn").instantiate()
 var in_puzzle : bool = false
 var in_dialogue : bool = false
 var in_handbook : bool = false
@@ -81,14 +82,19 @@ func _player_interact(target):
 	in_dialogue= false
 	
 func show_player_handbook():
-	if not handbook_scene.is_inside_tree():
+	if not handbook_scene.is_inside_tree() and not State.computer_table.puzzle_1_solved:
 		$Sounds/OpenMenu.play()
 		level.add_child(handbook_scene)
+		handbook_scene_path = handbook_scene.get_path()
 		camera.enabled = false
 		in_handbook = true
 	else:
 		$Sounds/CloseMenu.play()
-		level.remove_child(handbook_scene)
+		
+		if handbook_scene.get_node_or_null(handbook_scene_path) != null:
+			level.remove_child(handbook_scene)
+		else:
+			return
 		if not in_puzzle:
 			camera.enabled = true
 		in_handbook = false
