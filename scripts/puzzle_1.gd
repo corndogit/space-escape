@@ -34,5 +34,7 @@ func _check_result():
 		for field in input_fields:
 			field.editable = false
 		await get_tree().create_timer(1.0).timeout
+		CustomDialogue.start(DIALOGUE_TYPE, "puzzle_1_solved")
+		await DialogueManager.dialogue_ended
 		State.computer_table.puzzle_1_solved = true
-		CustomDialogue.start(DIALOGUE_TYPE, "computer_table")
+		queue_free()

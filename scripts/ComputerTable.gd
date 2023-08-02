@@ -3,6 +3,7 @@ extends Interactable
 var powered : bool = false
 var puzzle_1_solved : bool = false
 var current_scene : Node
+var puzzle_scene = preload("res://scenes/puzzle_1.tscn").instantiate()
 var clue_scene = preload("res://scenes/puzzle_2_clue.tscn").instantiate()
 @onready var insert_battery_sfx = $InsertBatterySFX
 @onready var remove_battery_sfx = $RemoveBatterySFX
@@ -14,7 +15,7 @@ const DIALOGUE_TYPE = CustomDialogue.DialogueType.INTERACTABLE
 
 func _ready():
 	State.computer_table = self
-	current_scene = preload("res://scenes/puzzle_1.tscn").instantiate()
+	current_scene = puzzle_scene
 	current_scene.visible = false
 
 func interact():
@@ -36,6 +37,8 @@ func open_puzzle():
 func close_puzzle():
 	player.in_puzzle = false
 	current_scene.visible = false
+	if puzzle_1_solved and puzzle_scene != null:  # maybe dangerous change
+		puzzle_scene.queue_free()
 	if close_sfx is AudioStreamPlayer:
 		close_sfx.play()
 	if level.get_node_or_null(current_scene.get_path()):

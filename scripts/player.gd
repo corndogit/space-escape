@@ -68,6 +68,8 @@ func _check_for_interactable():
 	return false
 	
 func _player_interact(target):
+	if in_dialogue:
+		return
 	in_dialogue = true  # entering dialogue
 	var sound : AudioStreamPlayer = target.get_node_or_null("InteractionSFX")
 	if sound is AudioStreamPlayer:

@@ -61,4 +61,5 @@ func _on_button_pressed():
 		for arr in inputs_dict.values():
 			for node in arr:
 				node.editable = false
+		button.disabled = true
 		CustomDialogue.start(DIALOGUE_TYPE, "computer_wall")
