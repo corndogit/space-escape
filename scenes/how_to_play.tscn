@@ -266,7 +266,7 @@ layout_mode = 2
 theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "- Use WASD to move around. 
-- Click the dialogue boxes to advance them.
+- Press ENTER or E to advance dialogue.
 - Some puzzles require using the mouse and typing.
 "
 fit_content = true
